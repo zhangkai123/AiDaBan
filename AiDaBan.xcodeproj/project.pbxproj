@@ -18,6 +18,7 @@
 		4B6C208417A4FFA8001441E4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B6C208317A4FFA8001441E4 /* Default-568h@2x.png */; };
 		4B6C208717A4FFA8001441E4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6C208617A4FFA8001441E4 /* ViewController.m */; };
 		4B6C209117A5078A001441E4 /* laopo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4B6C209017A5078A001441E4 /* laopo.jpg */; };
+		4B6C209417A54F64001441E4 /* ADEditTopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6C209317A54F64001441E4 /* ADEditTopCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		4B6C208517A4FFA8001441E4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		4B6C208617A4FFA8001441E4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4B6C209017A5078A001441E4 /* laopo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = laopo.jpg; sourceTree = "<group>"; };
+		4B6C209217A54F64001441E4 /* ADEditTopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADEditTopCell.h; sourceTree = "<group>"; };
+		4B6C209317A54F64001441E4 /* ADEditTopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADEditTopCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +90,8 @@
 				4B6C207D17A4FFA8001441E4 /* AppDelegate.m */,
 				4B6C208517A4FFA8001441E4 /* ViewController.h */,
 				4B6C208617A4FFA8001441E4 /* ViewController.m */,
+				4B6C209217A54F64001441E4 /* ADEditTopCell.h */,
+				4B6C209317A54F64001441E4 /* ADEditTopCell.m */,
 				4B6C207417A4FFA8001441E4 /* Supporting Files */,
 			);
 			path = AiDaBan;
@@ -176,6 +181,7 @@
 				4B6C207A17A4FFA8001441E4 /* main.m in Sources */,
 				4B6C207E17A4FFA8001441E4 /* AppDelegate.m in Sources */,
 				4B6C208717A4FFA8001441E4 /* ViewController.m in Sources */,
+				4B6C209417A54F64001441E4 /* ADEditTopCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +294,7 @@
 				4B6C208F17A4FFA8001441E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
