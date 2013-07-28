@@ -1,0 +1,295 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4B6C206E17A4FFA8001441E4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B6C206D17A4FFA8001441E4 /* UIKit.framework */; };
+		4B6C207017A4FFA8001441E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B6C206F17A4FFA8001441E4 /* Foundation.framework */; };
+		4B6C207217A4FFA8001441E4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B6C207117A4FFA8001441E4 /* CoreGraphics.framework */; };
+		4B6C207817A4FFA8001441E4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B6C207617A4FFA8001441E4 /* InfoPlist.strings */; };
+		4B6C207A17A4FFA8001441E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6C207917A4FFA8001441E4 /* main.m */; };
+		4B6C207E17A4FFA8001441E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6C207D17A4FFA8001441E4 /* AppDelegate.m */; };
+		4B6C208017A4FFA8001441E4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B6C207F17A4FFA8001441E4 /* Default.png */; };
+		4B6C208217A4FFA8001441E4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B6C208117A4FFA8001441E4 /* Default@2x.png */; };
+		4B6C208417A4FFA8001441E4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B6C208317A4FFA8001441E4 /* Default-568h@2x.png */; };
+		4B6C208717A4FFA8001441E4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6C208617A4FFA8001441E4 /* ViewController.m */; };
+		4B6C209117A5078A001441E4 /* laopo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4B6C209017A5078A001441E4 /* laopo.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4B6C206A17A4FFA8001441E4 /* AiDaBan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AiDaBan.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B6C206D17A4FFA8001441E4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4B6C206F17A4FFA8001441E4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4B6C207117A4FFA8001441E4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4B6C207517A4FFA8001441E4 /* AiDaBan-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AiDaBan-Info.plist"; sourceTree = "<group>"; };
+		4B6C207717A4FFA8001441E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4B6C207917A4FFA8001441E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4B6C207B17A4FFA8001441E4 /* AiDaBan-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AiDaBan-Prefix.pch"; sourceTree = "<group>"; };
+		4B6C207C17A4FFA8001441E4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4B6C207D17A4FFA8001441E4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4B6C207F17A4FFA8001441E4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		4B6C208117A4FFA8001441E4 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		4B6C208317A4FFA8001441E4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		4B6C208517A4FFA8001441E4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4B6C208617A4FFA8001441E4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4B6C209017A5078A001441E4 /* laopo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = laopo.jpg; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4B6C206717A4FFA8001441E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B6C206E17A4FFA8001441E4 /* UIKit.framework in Frameworks */,
+				4B6C207017A4FFA8001441E4 /* Foundation.framework in Frameworks */,
+				4B6C207217A4FFA8001441E4 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4B6C206117A4FFA8001441E4 = {
+			isa = PBXGroup;
+			children = (
+				4B6C207317A4FFA8001441E4 /* AiDaBan */,
+				4B6C206C17A4FFA8001441E4 /* Frameworks */,
+				4B6C206B17A4FFA8001441E4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4B6C206B17A4FFA8001441E4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4B6C206A17A4FFA8001441E4 /* AiDaBan.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4B6C206C17A4FFA8001441E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4B6C206D17A4FFA8001441E4 /* UIKit.framework */,
+				4B6C206F17A4FFA8001441E4 /* Foundation.framework */,
+				4B6C207117A4FFA8001441E4 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4B6C207317A4FFA8001441E4 /* AiDaBan */ = {
+			isa = PBXGroup;
+			children = (
+				4B6C207C17A4FFA8001441E4 /* AppDelegate.h */,
+				4B6C207D17A4FFA8001441E4 /* AppDelegate.m */,
+				4B6C208517A4FFA8001441E4 /* ViewController.h */,
+				4B6C208617A4FFA8001441E4 /* ViewController.m */,
+				4B6C207417A4FFA8001441E4 /* Supporting Files */,
+			);
+			path = AiDaBan;
+			sourceTree = "<group>";
+		};
+		4B6C207417A4FFA8001441E4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4B6C209017A5078A001441E4 /* laopo.jpg */,
+				4B6C207517A4FFA8001441E4 /* AiDaBan-Info.plist */,
+				4B6C207617A4FFA8001441E4 /* InfoPlist.strings */,
+				4B6C207917A4FFA8001441E4 /* main.m */,
+				4B6C207B17A4FFA8001441E4 /* AiDaBan-Prefix.pch */,
+				4B6C207F17A4FFA8001441E4 /* Default.png */,
+				4B6C208117A4FFA8001441E4 /* Default@2x.png */,
+				4B6C208317A4FFA8001441E4 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4B6C206917A4FFA8001441E4 /* AiDaBan */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B6C208D17A4FFA8001441E4 /* Build configuration list for PBXNativeTarget "AiDaBan" */;
+			buildPhases = (
+				4B6C206617A4FFA8001441E4 /* Sources */,
+				4B6C206717A4FFA8001441E4 /* Frameworks */,
+				4B6C206817A4FFA8001441E4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AiDaBan;
+			productName = AiDaBan;
+			productReference = 4B6C206A17A4FFA8001441E4 /* AiDaBan.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4B6C206217A4FFA8001441E4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "zhang kai";
+			};
+			buildConfigurationList = 4B6C206517A4FFA8001441E4 /* Build configuration list for PBXProject "AiDaBan" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4B6C206117A4FFA8001441E4;
+			productRefGroup = 4B6C206B17A4FFA8001441E4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4B6C206917A4FFA8001441E4 /* AiDaBan */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4B6C206817A4FFA8001441E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B6C207817A4FFA8001441E4 /* InfoPlist.strings in Resources */,
+				4B6C208017A4FFA8001441E4 /* Default.png in Resources */,
+				4B6C208217A4FFA8001441E4 /* Default@2x.png in Resources */,
+				4B6C208417A4FFA8001441E4 /* Default-568h@2x.png in Resources */,
+				4B6C209117A5078A001441E4 /* laopo.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4B6C206617A4FFA8001441E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B6C207A17A4FFA8001441E4 /* main.m in Sources */,
+				4B6C207E17A4FFA8001441E4 /* AppDelegate.m in Sources */,
+				4B6C208717A4FFA8001441E4 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4B6C207617A4FFA8001441E4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B6C207717A4FFA8001441E4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4B6C208B17A4FFA8001441E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4B6C208C17A4FFA8001441E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4B6C208E17A4FFA8001441E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AiDaBan/AiDaBan-Prefix.pch";
+				INFOPLIST_FILE = "AiDaBan/AiDaBan-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4B6C208F17A4FFA8001441E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AiDaBan/AiDaBan-Prefix.pch";
+				INFOPLIST_FILE = "AiDaBan/AiDaBan-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4B6C206517A4FFA8001441E4 /* Build configuration list for PBXProject "AiDaBan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B6C208B17A4FFA8001441E4 /* Debug */,
+				4B6C208C17A4FFA8001441E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B6C208D17A4FFA8001441E4 /* Build configuration list for PBXNativeTarget "AiDaBan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B6C208E17A4FFA8001441E4 /* Debug */,
+				4B6C208F17A4FFA8001441E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4B6C206217A4FFA8001441E4 /* Project object */;
+}
