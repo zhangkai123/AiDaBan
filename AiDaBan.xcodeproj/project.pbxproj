@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B1BA80C17ACF89800FA63EB /* 112-group.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B1BA80A17ACF89800FA63EB /* 112-group.png */; };
+		4B1BA80D17ACF89800FA63EB /* 112-group@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B1BA80B17ACF89800FA63EB /* 112-group@2x.png */; };
+		4B1BA81017ACF8A700FA63EB /* 123-id-card.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B1BA80E17ACF8A700FA63EB /* 123-id-card.png */; };
+		4B1BA81117ACF8A700FA63EB /* 123-id-card@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B1BA80F17ACF8A700FA63EB /* 123-id-card@2x.png */; };
+		4B1BA81417ACF8B400FA63EB /* cameraTabBarItem.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B1BA81217ACF8B400FA63EB /* cameraTabBarItem.png */; };
+		4B1BA81517ACF8B400FA63EB /* cameraTabBarItem@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B1BA81317ACF8B400FA63EB /* cameraTabBarItem@2x.png */; };
+		4B1BA81917ACF8E500FA63EB /* ADTabbarBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1BA81817ACF8E500FA63EB /* ADTabbarBaseViewController.m */; };
+		4B1BA81C17ACF8F600FA63EB /* ADTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1BA81B17ACF8F600FA63EB /* ADTabbarViewController.m */; };
 		4B6C206E17A4FFA8001441E4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B6C206D17A4FFA8001441E4 /* UIKit.framework */; };
 		4B6C207017A4FFA8001441E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B6C206F17A4FFA8001441E4 /* Foundation.framework */; };
 		4B6C207217A4FFA8001441E4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B6C207117A4FFA8001441E4 /* CoreGraphics.framework */; };
@@ -22,6 +30,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B1BA80A17ACF89800FA63EB /* 112-group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "112-group.png"; sourceTree = "<group>"; };
+		4B1BA80B17ACF89800FA63EB /* 112-group@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "112-group@2x.png"; sourceTree = "<group>"; };
+		4B1BA80E17ACF8A700FA63EB /* 123-id-card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "123-id-card.png"; sourceTree = "<group>"; };
+		4B1BA80F17ACF8A700FA63EB /* 123-id-card@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "123-id-card@2x.png"; sourceTree = "<group>"; };
+		4B1BA81217ACF8B400FA63EB /* cameraTabBarItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cameraTabBarItem.png; sourceTree = "<group>"; };
+		4B1BA81317ACF8B400FA63EB /* cameraTabBarItem@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cameraTabBarItem@2x.png"; sourceTree = "<group>"; };
+		4B1BA81717ACF8E500FA63EB /* ADTabbarBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADTabbarBaseViewController.h; sourceTree = "<group>"; };
+		4B1BA81817ACF8E500FA63EB /* ADTabbarBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADTabbarBaseViewController.m; sourceTree = "<group>"; };
+		4B1BA81A17ACF8F600FA63EB /* ADTabbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADTabbarViewController.h; sourceTree = "<group>"; };
+		4B1BA81B17ACF8F600FA63EB /* ADTabbarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADTabbarViewController.m; sourceTree = "<group>"; };
 		4B6C206A17A4FFA8001441E4 /* AiDaBan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AiDaBan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B6C206D17A4FFA8001441E4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4B6C206F17A4FFA8001441E4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -56,6 +74,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B1BA80817ACF87D00FA63EB /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				4B1BA80917ACF88400FA63EB /* tabbar */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		4B1BA80917ACF88400FA63EB /* tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				4B1BA80A17ACF89800FA63EB /* 112-group.png */,
+				4B1BA80B17ACF89800FA63EB /* 112-group@2x.png */,
+				4B1BA80E17ACF8A700FA63EB /* 123-id-card.png */,
+				4B1BA80F17ACF8A700FA63EB /* 123-id-card@2x.png */,
+				4B1BA81217ACF8B400FA63EB /* cameraTabBarItem.png */,
+				4B1BA81317ACF8B400FA63EB /* cameraTabBarItem@2x.png */,
+			);
+			name = tabbar;
+			sourceTree = "<group>";
+		};
+		4B1BA81617ACF8D400FA63EB /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				4B1BA81717ACF8E500FA63EB /* ADTabbarBaseViewController.h */,
+				4B1BA81817ACF8E500FA63EB /* ADTabbarBaseViewController.m */,
+				4B1BA81A17ACF8F600FA63EB /* ADTabbarViewController.h */,
+				4B1BA81B17ACF8F600FA63EB /* ADTabbarViewController.m */,
+			);
+			name = TabBar;
+			sourceTree = "<group>";
+		};
 		4B6C206117A4FFA8001441E4 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +136,7 @@
 		4B6C207317A4FFA8001441E4 /* AiDaBan */ = {
 			isa = PBXGroup;
 			children = (
+				4B1BA81617ACF8D400FA63EB /* TabBar */,
 				4B6C207C17A4FFA8001441E4 /* AppDelegate.h */,
 				4B6C207D17A4FFA8001441E4 /* AppDelegate.m */,
 				4B6C208517A4FFA8001441E4 /* ViewController.h */,
@@ -100,6 +151,7 @@
 		4B6C207417A4FFA8001441E4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4B1BA80817ACF87D00FA63EB /* Images */,
 				4B6C209017A5078A001441E4 /* laopo.jpg */,
 				4B6C207517A4FFA8001441E4 /* AiDaBan-Info.plist */,
 				4B6C207617A4FFA8001441E4 /* InfoPlist.strings */,
@@ -168,6 +220,12 @@
 				4B6C208217A4FFA8001441E4 /* Default@2x.png in Resources */,
 				4B6C208417A4FFA8001441E4 /* Default-568h@2x.png in Resources */,
 				4B6C209117A5078A001441E4 /* laopo.jpg in Resources */,
+				4B1BA80C17ACF89800FA63EB /* 112-group.png in Resources */,
+				4B1BA80D17ACF89800FA63EB /* 112-group@2x.png in Resources */,
+				4B1BA81017ACF8A700FA63EB /* 123-id-card.png in Resources */,
+				4B1BA81117ACF8A700FA63EB /* 123-id-card@2x.png in Resources */,
+				4B1BA81417ACF8B400FA63EB /* cameraTabBarItem.png in Resources */,
+				4B1BA81517ACF8B400FA63EB /* cameraTabBarItem@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +240,8 @@
 				4B6C207E17A4FFA8001441E4 /* AppDelegate.m in Sources */,
 				4B6C208717A4FFA8001441E4 /* ViewController.m in Sources */,
 				4B6C209417A54F64001441E4 /* ADEditTopCell.m in Sources */,
+				4B1BA81917ACF8E500FA63EB /* ADTabbarBaseViewController.m in Sources */,
+				4B1BA81C17ACF8F600FA63EB /* ADTabbarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

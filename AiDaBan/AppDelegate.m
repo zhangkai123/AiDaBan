@@ -8,14 +8,12 @@
 
 #import "AppDelegate.h"
 
-#import "ViewController.h"
-
 @implementation AppDelegate
 
 - (void)dealloc
 {
     [_window release];
-    [_viewController release];
+    [_tabBarViewController release];
     [super dealloc];
 }
 
@@ -23,8 +21,8 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-    self.viewController = [[[ViewController alloc] init] autorelease];
-    self.window.rootViewController = self.viewController;
+    self.tabBarViewController = [[[ADTabbarViewController alloc] init] autorelease];
+    self.window.rootViewController = self.tabBarViewController;
     [self.window makeKeyAndVisible];
     return YES;
 }
