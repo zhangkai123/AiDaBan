@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "ADEditTopCell.h"
 
-@interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface ViewController ()<UITableViewDataSource,UITableViewDelegate,UIActionSheetDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 {
     UILabel *topicLabel;
     UIImageView *topicImageView;
@@ -27,6 +27,14 @@
 	// Do any additional setup after loading the view, typically from a nib.
     UIView *topBarView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 44)];
     topBarView.backgroundColor = [UIColor yellowColor];
+    
+    UIButton *backButton = [[UIButton alloc]initWithFrame:CGRectMake(5, 5, 45, 34)];
+    [backButton setTitle:@"back" forState:UIControlStateNormal];
+    backButton.backgroundColor = [UIColor blueColor];
+    
+    [backButton addTarget:self action:@selector(goBack) forControlEvents:UIControlEventTouchUpInside];
+    [topBarView addSubview:backButton];
+    [backButton release];
     
     UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(20, 0, 280, 44)];
     titleLabel.text = @"教程编辑";
@@ -73,17 +81,43 @@
     
     [self.view addSubview:bottomBarView];
 }
+-(void)goBack
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 -(void)finishEdit
 {
     
 }
 -(void)startEdit
 {
-    
+    UIActionSheet *ac=[[UIActionSheet alloc]initWithTitle:nil delegate:self cancelButtonTitle:@"cancel" destructiveButtonTitle:nil otherButtonTitles:@"Photo Library",@"Camera Capture", nil];
+    ac.delegate = self;
+    [ac showInView:self.view];
+    [ac release];
 }
 -(void)preView
 {
     
+}
+
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0) {
+        [self showImagePickerForSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+    }else if(buttonIndex == 1){
+        [self showImagePickerForSourceType:UIImagePickerControllerSourceTypeCamera];
+    }
+}
+- (void)showImagePickerForSourceType:(UIImagePickerControllerSourceType)sourceType
+{    
+    UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
+    imagePickerController.modalPresentationStyle = UIModalPresentationCurrentContext;
+    imagePickerController.sourceType = sourceType;
+    imagePickerController.delegate = self;
+    
+    [self presentViewController:imagePickerController animated:YES completion:nil];
+    [imagePickerController release];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -117,6 +151,22 @@
     }
     return height;
 }
+
+#pragma mark - UIImagePickerControllerDelegate
+
+// This method is called when an image has been chosen from the library or taken from the camera.
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    UIImage *image = [info valueForKey:UIImagePickerControllerOriginalImage];
+    
+}
+
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
 
 - (void)didReceiveMemoryWarning
 {
