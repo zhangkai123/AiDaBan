@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "ADEditTopCell.h"
+#import "ADPhotoEditView.h"
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate,UIActionSheetDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 {
@@ -16,11 +17,18 @@
     UILabel *dateLabel;
     
     UITableView *theTableView;
+    
+    ADPhotoEditView *photoEditView;
 }
 @end
 
 @implementation ViewController
 
+-(void)dealloc
+{
+    [photoEditView release];
+    [super dealloc];
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -80,6 +88,10 @@
     [previewButton release];
     
     [self.view addSubview:bottomBarView];
+    
+    photoEditView = [[ADPhotoEditView alloc]initWithFrame:CGRectMake(0, 0, 320, 460)];
+    [self.view addSubview:photoEditView];
+    photoEditView.hidden = YES;
 }
 -(void)goBack
 {
@@ -159,6 +171,10 @@
 {
     UIImage *image = [info valueForKey:UIImagePickerControllerOriginalImage];
     
+    photoEditView.hidden = NO;
+    photoEditView.photoView.image = image;
+    
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 
