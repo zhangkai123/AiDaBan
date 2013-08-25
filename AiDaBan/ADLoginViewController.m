@@ -38,16 +38,16 @@
     [backButton release];
 
     UIButton *sinaLoginButton = [[UIButton alloc]initWithFrame:CGRectMake(30, 170, 260, 34)];
-    [sinaLoginButton setTitle:@"新浪微博登陆" forState:UIControlStateNormal];
+    [sinaLoginButton setTitle:@"QQ登陆" forState:UIControlStateNormal];
     sinaLoginButton.backgroundColor = [UIColor redColor];
-    [sinaLoginButton addTarget:self action:@selector(sinaWeiboLogin) forControlEvents:UIControlEventTouchUpInside];
+    [sinaLoginButton addTarget:self action:@selector(qqLogin) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:sinaLoginButton];
     [sinaLoginButton release];
     
     UIButton *tecentLoginButton = [[UIButton alloc]initWithFrame:CGRectMake(30, 220, 260, 34)];
-    [tecentLoginButton setTitle:@"腾讯微博登陆" forState:UIControlStateNormal];
+    [tecentLoginButton setTitle:@"新浪微博登陆" forState:UIControlStateNormal];
     tecentLoginButton.backgroundColor = [UIColor purpleColor];
-    [tecentLoginButton addTarget:self action:@selector(tencentWeiboLogin) forControlEvents:UIControlEventTouchUpInside];
+    [tecentLoginButton addTarget:self action:@selector(sinaWeiboLogin) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:tecentLoginButton];
     [tecentLoginButton release];
 
@@ -69,11 +69,11 @@
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
--(void)sinaWeiboLogin
+-(void)qqLogin
 {
     
 }
--(void)tencentWeiboLogin
+-(void)sinaWeiboLogin
 {
     
 }
