@@ -26,7 +26,11 @@
 //
 
 #import "ADTabbarViewController.h"
-#import "ViewController.h"
+#import "ADExploreViewController.h"
+#import "ADEditViewController.h"
+#import "ADMeViewController.h"
+
+#import "ADLoginViewController.h"
 
 @implementation ADTabbarViewController
 
@@ -34,10 +38,16 @@
 {
   [super viewDidLoad];
 
-  self.viewControllers = [NSArray arrayWithObjects:
-                            [self viewControllerWithTabTitle:@"浏览" image:[UIImage imageNamed:@"112-group.png"]],
+    ADExploreViewController *exploreViewController = [[[ADExploreViewController alloc]init]autorelease];
+    exploreViewController.tabBarItem = [[[UITabBarItem alloc] initWithTitle:@"浏览" image:[UIImage imageNamed:@"112-group.png"] tag:0] autorelease];
+    
+    ADMeViewController *meViewController = [[[ADMeViewController alloc]init]autorelease];
+    meViewController.tabBarItem = [[[UITabBarItem alloc] initWithTitle:@"我的" image:[UIImage imageNamed:@"123-id-card.png"] tag:0] autorelease];
+    
+    self.viewControllers = [NSArray arrayWithObjects:
+                            exploreViewController,
                             [self viewControllerWithTabTitle:@"编辑" image:nil],
-                            [self viewControllerWithTabTitle:@"我的" image:[UIImage imageNamed:@"123-id-card.png"]], nil];
+                            meViewController, nil];    
 }
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -45,8 +55,12 @@
 }
 -(void)addContent
 {
-    ViewController *viewController = [[ViewController alloc]init];
-    [self presentViewController:viewController animated:YES completion:nil];
-    [viewController release];
+//    ADEditViewController *viewController = [[ADEditViewController alloc]init];
+//    [self presentViewController:viewController animated:YES completion:nil];
+//    [viewController release];
+    
+    ADLoginViewController *loginViewController = [[ADLoginViewController alloc]init];
+    [self presentViewController:loginViewController animated:YES completion:nil];
+    [loginViewController release];
 }
 @end

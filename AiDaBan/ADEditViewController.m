@@ -6,11 +6,11 @@
 //  Copyright (c) 2013 zhang kai. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "ADEditViewController.h"
 #import "ADEditTopCell.h"
 #import "ADPhotoEditView.h"
 
-@interface ViewController ()<UITableViewDataSource,UITableViewDelegate,UIActionSheetDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
+@interface ADEditViewController ()<UITableViewDataSource,UITableViewDelegate,UIActionSheetDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 {
     UILabel *topicLabel;
     UIImageView *topicImageView;
@@ -22,7 +22,7 @@
 }
 @end
 
-@implementation ViewController
+@implementation ADEditViewController
 
 -(void)dealloc
 {
