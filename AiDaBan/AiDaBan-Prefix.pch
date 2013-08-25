@@ -11,4 +11,10 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+
+    #import "WeiboSDK.h"
+
+    #define kAppKey         @"2045436852"
+    #define kRedirectURI    @"http://www.sina.com"
+
 #endif
