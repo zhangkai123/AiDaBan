@@ -83,16 +83,29 @@
     }
     else if ([response isKindOfClass:WBAuthorizeResponse.class])
     {
-        NSString *title = @"认证结果";
-        NSString *message = [NSString stringWithFormat:@"响应状态: %d\nresponse.userId: %@\nresponse.accessToken: %@\n响应UserInfo数据: %@\n原请求UserInfo数据: %@",
-                             response.statusCode, [(WBAuthorizeResponse *)response userID], [(WBAuthorizeResponse *)response accessToken], response.userInfo, response.requestUserInfo];
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
-                                                        message:message
-                                                       delegate:nil
-                                              cancelButtonTitle:@"确定"
-                                              otherButtonTitles:nil];
-        [alert show];
-        [alert release];
+        NSString *userInfoStr = [response.requestUserInfo objectForKey:@"SSO_From"];
+        if ([userInfoStr isEqualToString:@"ADLoginViewController"]) {
+            
+            if (response.statusCode == 0) {
+                NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+                [userDefaults setObject:[(WBAuthorizeResponse *)response userID] forKey:@"ADUserId"];
+                [userDefaults setObject:[(WBAuthorizeResponse *)response accessToken] forKey:@"ADAccessToken"];
+                [userDefaults setObject:[(WBAuthorizeResponse *)response expirationDate] forKey:@"ADExpirationDate"];
+                [userDefaults synchronize];
+                
+                NSString *title = @"认证结果";
+                NSString *message = [NSString stringWithFormat:@"响应状态: %d\nresponse.userId: %@\nresponse.accessToken: %@\n响应UserInfo数据: %@\n原请求UserInfo数据: %@",
+                                     response.statusCode, [(WBAuthorizeResponse *)response userID], [(WBAuthorizeResponse *)response accessToken], response.userInfo, response.requestUserInfo];
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
+                                                                message:message
+                                                               delegate:nil
+                                                      cancelButtonTitle:@"确定"
+                                                      otherButtonTitles:nil];
+                [alert show];
+                [alert release];
+                
+            }
+        }
     }
 }
 
