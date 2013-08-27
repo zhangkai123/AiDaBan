@@ -27,6 +27,8 @@
 		4B6C208717A4FFA8001441E4 /* ADEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6C208617A4FFA8001441E4 /* ADEditViewController.m */; };
 		4B6C209117A5078A001441E4 /* laopo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4B6C209017A5078A001441E4 /* laopo.jpg */; };
 		4B6C209417A54F64001441E4 /* ADEditTopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6C209317A54F64001441E4 /* ADEditTopCell.m */; };
+		4BA4AD1E17CCDF5900521FBA /* ADLoginDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA4AD1D17CCDF5900521FBA /* ADLoginDataController.m */; };
+		4BA4AD2317CCE77300521FBA /* ADSinaAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA4AD2217CCE77300521FBA /* ADSinaAPIClient.m */; };
 		4BA4B0EF17C88E1300F148FF /* ADPhotoEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA4B0EE17C88E1300F148FF /* ADPhotoEditView.m */; };
 		4BA4B0F217C9C21400F148FF /* ADExploreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA4B0F117C9C21400F148FF /* ADExploreViewController.m */; };
 		4BA4B0F617C9C25200F148FF /* ADMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA4B0F517C9C25200F148FF /* ADMeViewController.m */; };
@@ -77,6 +79,11 @@
 		4B6C209017A5078A001441E4 /* laopo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = laopo.jpg; sourceTree = "<group>"; };
 		4B6C209217A54F64001441E4 /* ADEditTopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADEditTopCell.h; sourceTree = "<group>"; };
 		4B6C209317A54F64001441E4 /* ADEditTopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADEditTopCell.m; sourceTree = "<group>"; };
+		4BA4AD1C17CCDF5900521FBA /* ADLoginDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADLoginDataController.h; sourceTree = "<group>"; };
+		4BA4AD1D17CCDF5900521FBA /* ADLoginDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADLoginDataController.m; sourceTree = "<group>"; };
+		4BA4AD2017CCE02E00521FBA /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		4BA4AD2117CCE77300521FBA /* ADSinaAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADSinaAPIClient.h; sourceTree = "<group>"; };
+		4BA4AD2217CCE77300521FBA /* ADSinaAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADSinaAPIClient.m; sourceTree = "<group>"; };
 		4BA4B0ED17C88E1300F148FF /* ADPhotoEditView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADPhotoEditView.h; sourceTree = "<group>"; };
 		4BA4B0EE17C88E1300F148FF /* ADPhotoEditView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADPhotoEditView.m; sourceTree = "<group>"; };
 		4BA4B0F017C9C21400F148FF /* ADExploreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADExploreViewController.h; sourceTree = "<group>"; };
@@ -199,7 +206,10 @@
 			isa = PBXGroup;
 			children = (
 				4BA4B0FB17C9E8EB00F148FF /* ThirdPartyLibrary */,
-				4BA4B0F717C9C73F00F148FF /* Login */,
+				4BA4AD1F17CCDFFC00521FBA /* Help */,
+				4BA4AD1B17CCDC4B00521FBA /* DataModel */,
+				4BA4AD1A17CCDC3300521FBA /* DataManager */,
+				4BA4B0F717C9C73F00F148FF /* LoginViewController */,
 				4B1BA81617ACF8D400FA63EB /* TabBar */,
 				4BA4B0F317C9C22100F148FF /* TabViewControllers */,
 				4B6C207C17A4FFA8001441E4 /* AppDelegate.h */,
@@ -229,6 +239,32 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4BA4AD1A17CCDC3300521FBA /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				4BA4AD2117CCE77300521FBA /* ADSinaAPIClient.h */,
+				4BA4AD2217CCE77300521FBA /* ADSinaAPIClient.m */,
+				4BA4AD1C17CCDF5900521FBA /* ADLoginDataController.h */,
+				4BA4AD1D17CCDF5900521FBA /* ADLoginDataController.m */,
+			);
+			name = DataManager;
+			sourceTree = "<group>";
+		};
+		4BA4AD1B17CCDC4B00521FBA /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DataModel;
+			sourceTree = "<group>";
+		};
+		4BA4AD1F17CCDFFC00521FBA /* Help */ = {
+			isa = PBXGroup;
+			children = (
+				4BA4AD2017CCE02E00521FBA /* Common.h */,
+			);
+			name = Help;
+			sourceTree = "<group>";
+		};
 		4BA4B0F317C9C22100F148FF /* TabViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,13 +278,13 @@
 			name = TabViewControllers;
 			sourceTree = "<group>";
 		};
-		4BA4B0F717C9C73F00F148FF /* Login */ = {
+		4BA4B0F717C9C73F00F148FF /* LoginViewController */ = {
 			isa = PBXGroup;
 			children = (
 				4BA4B0F817C9C76700F148FF /* ADLoginViewController.h */,
 				4BA4B0F917C9C76700F148FF /* ADLoginViewController.m */,
 			);
-			name = Login;
+			name = LoginViewController;
 			sourceTree = "<group>";
 		};
 		4BA4B0FB17C9E8EB00F148FF /* ThirdPartyLibrary */ = {
@@ -388,6 +424,8 @@
 				4BA4B11617C9EA1A00F148FF /* AFURLConnectionOperation.m in Sources */,
 				4BA4B11717C9EA1A00F148FF /* AFXMLRequestOperation.m in Sources */,
 				4BA4B11817C9EA1A00F148FF /* UIImageView+AFNetworking.m in Sources */,
+				4BA4AD1E17CCDF5900521FBA /* ADLoginDataController.m in Sources */,
+				4BA4AD2317CCE77300521FBA /* ADSinaAPIClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

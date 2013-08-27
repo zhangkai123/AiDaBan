@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ADLoginDataController.h"
 
 @implementation AppDelegate
 
@@ -88,22 +89,12 @@
             
             if (response.statusCode == 0) {
                 NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-                [userDefaults setObject:[(WBAuthorizeResponse *)response userID] forKey:@"ADUserId"];
-                [userDefaults setObject:[(WBAuthorizeResponse *)response accessToken] forKey:@"ADAccessToken"];
-                [userDefaults setObject:[(WBAuthorizeResponse *)response expirationDate] forKey:@"ADExpirationDate"];
+                [userDefaults setObject:[(WBAuthorizeResponse *)response userID] forKey:AD_USER_ID];
+                [userDefaults setObject:[(WBAuthorizeResponse *)response accessToken] forKey:AD_ACCESS_TOKEN];
+                [userDefaults setObject:[(WBAuthorizeResponse *)response expirationDate] forKey:AD_EXPIRATION_DATE];
                 [userDefaults synchronize];
                 
-                NSString *title = @"认证结果";
-                NSString *message = [NSString stringWithFormat:@"响应状态: %d\nresponse.userId: %@\nresponse.accessToken: %@\n响应UserInfo数据: %@\n原请求UserInfo数据: %@",
-                                     response.statusCode, [(WBAuthorizeResponse *)response userID], [(WBAuthorizeResponse *)response accessToken], response.userInfo, response.requestUserInfo];
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
-                                                                message:message
-                                                               delegate:nil
-                                                      cancelButtonTitle:@"确定"
-                                                      otherButtonTitles:nil];
-                [alert show];
-                [alert release];
-                
+                [[ADLoginDataController sharedDataController]getSinaUserInfo];
             }
         }
     }
