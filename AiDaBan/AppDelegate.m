@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "ADLoginDataController.h"
 
 @implementation AppDelegate
 
@@ -94,7 +93,13 @@
                 [userDefaults setObject:[(WBAuthorizeResponse *)response expirationDate] forKey:AD_EXPIRATION_DATE];
                 [userDefaults synchronize];
                 
-                [[ADLoginDataController sharedDataController]getSinaUserInfo];
+                [[ADDataController sharedDataController]getSinaUserInfo:^(ADUser *sinaUser){
+                    NSLog(@"---%@---\n",sinaUser.name);
+                    NSLog(@"---%@---\n",sinaUser.profile_image_url);
+                    NSLog(@"---%@---\n",sinaUser.gender);
+                } failure:^(NSError *error){
+                    
+                }];
             }
         }
     }

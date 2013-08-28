@@ -1,24 +1,24 @@
 //
-//  ADLoginDataController.m
+//  ADNetworkManager.m
 //  AiDaBan
 //
-//  Created by zhang kai on 8/27/13.
+//  Created by zhang kai on 8/28/13.
 //  Copyright (c) 2013 zhang kai. All rights reserved.
 //
 
-#import "ADLoginDataController.h"
+#import "ADNetworkManager.h"
 #import "ADSinaAPIClient.h"
 
-@implementation ADLoginDataController
-+(id)sharedDataController
+@implementation ADNetworkManager
++(id)sharedNetworkManager
 {
-    static ADLoginDataController *loginDataController;
+    static ADNetworkManager *networkManagerController;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         
-        loginDataController = [[ADLoginDataController alloc]init];
+        networkManagerController = [[ADNetworkManager alloc]init];
     });
-    return loginDataController;
+    return networkManagerController;
 }
 -(id)init
 {
@@ -26,11 +26,10 @@
     }
     return self;
 }
--(void)getSinaUserInfo
+
+-(void)sendSinaUserInfoRequest:(void (^)(id JSON))success failure:(void (^)(NSError *error))failure
 {
     ADSinaAPIClient *client = [ADSinaAPIClient sharedClient];
-//    [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
-//    [[AFNetworkActivityIndicatorManager sharedManager] incrementActivityCount];
     
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSString *userId = [userDefaults objectForKey:AD_USER_ID];
@@ -41,14 +40,13 @@
     NSURLRequest *request = [client requestWithMethod:@"GET" path:path parameters:paraDic];
     
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-//        [[AFNetworkActivityIndicatorManager sharedManager] decrementActivityCount];
-        NSLog(@"---");
         
+        success(JSON);
     }failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
-//        [[AFNetworkActivityIndicatorManager sharedManager] decrementActivityCount];
-        NSLog(@"---");
-
+        
+        failure(error);
     }];
     [operation start];
 }
+
 @end

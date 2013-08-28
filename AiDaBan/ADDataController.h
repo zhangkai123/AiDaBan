@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ADUser.h"
 
-@interface ADLoginDataController : NSObject
+@interface ADDataController : NSObject
 
 
 +(id)sharedDataController;
--(void)getSinaUserInfo;
+-(void)getSinaUserInfo:(void(^)(ADUser *sinaUser))sinaUserInfo failure:(void (^)(NSError *error))failure;
 @end
