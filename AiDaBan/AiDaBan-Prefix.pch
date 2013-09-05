@@ -15,8 +15,4 @@
     #import "WeiboSDK.h"
     #import "Common.h"
     #import "ADDataController.h"
-
-    #define kAppKey         @"2045436852"
-    #define kRedirectURI    @"http://www.sina.com"
-
 #endif

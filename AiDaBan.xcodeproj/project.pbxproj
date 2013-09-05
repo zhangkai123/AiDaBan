@@ -46,8 +46,8 @@
 		4BA4B11E17C9EB3500F148FF /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BA4B11A17C9EB3500F148FF /* MobileCoreServices.framework */; };
 		4BA4B11F17C9EB3500F148FF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BA4B11B17C9EB3500F148FF /* Security.framework */; };
 		4BA4B12017C9EB3500F148FF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BA4B11C17C9EB3500F148FF /* SystemConfiguration.framework */; };
-		4BA4B12517C9F44000F148FF /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BA4B12217C9F44000F148FF /* libWeiboSDK.a */; };
-		4BA4B12617C9F44000F148FF /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4BA4B12317C9F44000F148FF /* WeiboSDK.bundle */; };
+		4BBC58D617D8C1BC00612543 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BBC58D317D8C1BC00612543 /* libWeiboSDK.a */; };
+		4BBC58D717D8C1BC00612543 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4BBC58D417D8C1BC00612543 /* WeiboSDK.bundle */; };
 		4BC3383B17CE2A1C00F2ACFD /* ADNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC3383A17CE2A1C00F2ACFD /* ADNetworkManager.m */; };
 		4BC3383E17CE300B00F2ACFD /* ADUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC3383D17CE300B00F2ACFD /* ADUser.m */; };
 /* End PBXBuildFile section */
@@ -117,9 +117,9 @@
 		4BA4B11A17C9EB3500F148FF /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		4BA4B11B17C9EB3500F148FF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		4BA4B11C17C9EB3500F148FF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		4BA4B12217C9F44000F148FF /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
-		4BA4B12317C9F44000F148FF /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
-		4BA4B12417C9F44000F148FF /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
+		4BBC58D317D8C1BC00612543 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
+		4BBC58D417D8C1BC00612543 /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
+		4BBC58D517D8C1BC00612543 /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
 		4BC3383917CE2A1C00F2ACFD /* ADNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADNetworkManager.h; sourceTree = "<group>"; };
 		4BC3383A17CE2A1C00F2ACFD /* ADNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADNetworkManager.m; sourceTree = "<group>"; };
 		4BC3383C17CE300B00F2ACFD /* ADUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADUser.h; sourceTree = "<group>"; };
@@ -134,11 +134,11 @@
 				4BA4B11D17C9EB3500F148FF /* CoreLocation.framework in Frameworks */,
 				4BA4B11E17C9EB3500F148FF /* MobileCoreServices.framework in Frameworks */,
 				4BA4B11F17C9EB3500F148FF /* Security.framework in Frameworks */,
+				4BBC58D617D8C1BC00612543 /* libWeiboSDK.a in Frameworks */,
 				4BA4B12017C9EB3500F148FF /* SystemConfiguration.framework in Frameworks */,
 				4B6C206E17A4FFA8001441E4 /* UIKit.framework in Frameworks */,
 				4B6C207017A4FFA8001441E4 /* Foundation.framework in Frameworks */,
 				4B6C207217A4FFA8001441E4 /* CoreGraphics.framework in Frameworks */,
-				4BA4B12517C9F44000F148FF /* libWeiboSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +297,7 @@
 		4BA4B0FB17C9E8EB00F148FF /* ThirdPartyLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				4BA4B12117C9F44000F148FF /* libWeiboSDK */,
+				4BBC58D217D8C1BC00612543 /* libWeiboSDK */,
 				4BA4B0FC17C9EA1A00F148FF /* AFNetworking */,
 			);
 			name = ThirdPartyLibrary;
@@ -329,12 +329,12 @@
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
-		4BA4B12117C9F44000F148FF /* libWeiboSDK */ = {
+		4BBC58D217D8C1BC00612543 /* libWeiboSDK */ = {
 			isa = PBXGroup;
 			children = (
-				4BA4B12217C9F44000F148FF /* libWeiboSDK.a */,
-				4BA4B12317C9F44000F148FF /* WeiboSDK.bundle */,
-				4BA4B12417C9F44000F148FF /* WeiboSDK.h */,
+				4BBC58D317D8C1BC00612543 /* libWeiboSDK.a */,
+				4BBC58D417D8C1BC00612543 /* WeiboSDK.bundle */,
+				4BBC58D517D8C1BC00612543 /* WeiboSDK.h */,
 			);
 			path = libWeiboSDK;
 			sourceTree = "<group>";
@@ -412,7 +412,7 @@
 				4B1BA81117ACF8A700FA63EB /* 123-id-card@2x.png in Resources */,
 				4B1BA81417ACF8B400FA63EB /* cameraTabBarItem.png in Resources */,
 				4B1BA81517ACF8B400FA63EB /* cameraTabBarItem@2x.png in Resources */,
-				4BA4B12617C9F44000F148FF /* WeiboSDK.bundle in Resources */,
+				4BBC58D717D8C1BC00612543 /* WeiboSDK.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,7 +525,8 @@
 				INFOPLIST_FILE = "AiDaBan/AiDaBan-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/AiDaBan/libWeiboSDK\"",
+					"\\\"$(SRCROOT)/AiDaBan/libWeiboSDK\\\"",
+					/Users/zhangkai/Desktop/AiDaBan/AiDaBan/libWeiboSDK,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -540,7 +541,8 @@
 				INFOPLIST_FILE = "AiDaBan/AiDaBan-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/AiDaBan/libWeiboSDK\"",
+					"\\\"$(SRCROOT)/AiDaBan/libWeiboSDK\\\"",
+					/Users/zhangkai/Desktop/AiDaBan/AiDaBan/libWeiboSDK,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

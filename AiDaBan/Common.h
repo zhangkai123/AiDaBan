@@ -15,4 +15,7 @@
 
 #define AD_SINA_BASE_URL @"https://api.weibo.com/2/"
 
+#define kAppKey         @"3542450845"
+#define kRedirectURI    @"https://api.weibo.com/oauth2/default.html"
+
 #endif

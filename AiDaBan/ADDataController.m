@@ -36,4 +36,8 @@
         failure(error);
     }];
 }
+-(void)saveUserInfoToServer:(ADUser *)userInfo
+{
+    
+}
 @end

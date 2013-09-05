@@ -11,7 +11,7 @@
 			<string>com.weibo</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>wb2045436852</string>
+				<string>wb3542450845</string>
 			</array>
 		</dict>
 	</array>
@@ -22,7 +22,7 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.sina.weibo.SNWeiboSDKDemo</string>
+	<string>com.zhangkai.taozhuangwithpush</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>

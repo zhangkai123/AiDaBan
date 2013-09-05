@@ -54,7 +54,7 @@ typedef NS_ENUM(NSInteger, WeiboSDKResponseStatusCode)
  获取当前微博客户端程序所支持的SDK最高版本
  @return 当前微博客户端程序所支持的SDK最高版本号，返回 nil 表示未安装微博客户端
  */
-+ (NSString *)getWeiboAppSupportMaxSDKVersion;
++ (NSString *)getWeiboAppSupportMaxSDKVersion __attribute__((deprecated));
 
 /**
  获取当前微博SDK的版本号
@@ -127,7 +127,7 @@ typedef NS_ENUM(NSInteger, WeiboSDKResponseStatusCode)
 /**
  收到一个来自微博客户端程序的响应
  
- 收到微博的响应后，第三方应用可以通过响应类型、响应的数据和 [WBBaseResponse userInfo] 中的数据完成自己的功能
+ 收到微博的响应后，第三方应用可以通过响应类型、响应的数据和 WBBaseResponse.userInfo 中的数据完成自己的功能
  @param response 具体的响应对象
  */
 - (void)didReceiveWeiboResponse:(WBBaseResponse *)response;
@@ -195,7 +195,7 @@ typedef NS_ENUM(NSInteger, WeiboSDKResponseStatusCode)
  
  如果当前 response 是由微博客户端响应给第三方应用的，则 requestUserInfo 中会包含原 request.userInfo 中的所有数据
  
- @see [WBBaseRequest userInfo]
+ @see WBBaseRequest.userInfo
  */
 @property (nonatomic, readonly) NSDictionary *requestUserInfo;
 

@@ -69,12 +69,38 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "AiDaBan/AppDelegate.m"
-         timestampString = "399390719.677027"
+         timestampString = "400001560.232205"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "97"
-         endingLineNumber = "97"
+         startingLineNumber = "71"
+         endingLineNumber = "71"
          landmarkName = "-didReceiveWeiboResponse:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "AiDaBan/AppDelegate.m"
+         timestampString = "400002416.763001"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "110"
+         endingLineNumber = "110"
+         landmarkName = "-application:openURL:sourceApplication:annotation:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "AiDaBan/AppDelegate.m"
+         timestampString = "400002421.042034"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "62"
+         endingLineNumber = "62"
+         landmarkName = "-didReceiveWeiboRequest:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
