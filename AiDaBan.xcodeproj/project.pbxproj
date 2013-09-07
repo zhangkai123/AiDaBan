@@ -28,6 +28,8 @@
 		4B6C209117A5078A001441E4 /* laopo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4B6C209017A5078A001441E4 /* laopo.jpg */; };
 		4B6C209417A54F64001441E4 /* ADEditTopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6C209317A54F64001441E4 /* ADEditTopCell.m */; };
 		4B8BF3A517DACFDC0062BB8E /* ADMyServerClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8BF3A417DACFDC0062BB8E /* ADMyServerClient.m */; };
+		4B8BF3A917DB41560062BB8E /* ADDiskCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8BF3A817DB41560062BB8E /* ADDiskCacheManager.m */; };
+		4B8BF3AD17DB50430062BB8E /* ADMemoryCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8BF3AC17DB50430062BB8E /* ADMemoryCacheManager.m */; };
 		4BA4AD1E17CCDF5900521FBA /* ADDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA4AD1D17CCDF5900521FBA /* ADDataController.m */; };
 		4BA4AD2317CCE77300521FBA /* ADSinaAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA4AD2217CCE77300521FBA /* ADSinaAPIClient.m */; };
 		4BA4B0EF17C88E1300F148FF /* ADPhotoEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA4B0EE17C88E1300F148FF /* ADPhotoEditView.m */; };
@@ -84,6 +86,10 @@
 		4B6C209317A54F64001441E4 /* ADEditTopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADEditTopCell.m; sourceTree = "<group>"; };
 		4B8BF3A317DACFDC0062BB8E /* ADMyServerClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADMyServerClient.h; sourceTree = "<group>"; };
 		4B8BF3A417DACFDC0062BB8E /* ADMyServerClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADMyServerClient.m; sourceTree = "<group>"; };
+		4B8BF3A717DB41560062BB8E /* ADDiskCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADDiskCacheManager.h; sourceTree = "<group>"; };
+		4B8BF3A817DB41560062BB8E /* ADDiskCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADDiskCacheManager.m; sourceTree = "<group>"; };
+		4B8BF3AB17DB50430062BB8E /* ADMemoryCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADMemoryCacheManager.h; sourceTree = "<group>"; };
+		4B8BF3AC17DB50430062BB8E /* ADMemoryCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADMemoryCacheManager.m; sourceTree = "<group>"; };
 		4BA4AD1C17CCDF5900521FBA /* ADDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADDataController.h; sourceTree = "<group>"; };
 		4BA4AD1D17CCDF5900521FBA /* ADDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADDataController.m; sourceTree = "<group>"; };
 		4BA4AD2017CCE02E00521FBA /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
@@ -219,6 +225,8 @@
 				4BA4AD1B17CCDC4B00521FBA /* DataModel */,
 				4BA4AD1A17CCDC3300521FBA /* DataManager */,
 				4BC3383817CE290900F2ACFD /* NetworkManager */,
+				4B8BF3A617DB33130062BB8E /* DiskCacheManager */,
+				4B8BF3AA17DB50220062BB8E /* MemoryCacheManager */,
 				4BA4B0F717C9C73F00F148FF /* LoginViewController */,
 				4B1BA81617ACF8D400FA63EB /* TabBar */,
 				4BA4B0F317C9C22100F148FF /* TabViewControllers */,
@@ -247,6 +255,24 @@
 				4B6C208317A4FFA8001441E4 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4B8BF3A617DB33130062BB8E /* DiskCacheManager */ = {
+			isa = PBXGroup;
+			children = (
+				4B8BF3A717DB41560062BB8E /* ADDiskCacheManager.h */,
+				4B8BF3A817DB41560062BB8E /* ADDiskCacheManager.m */,
+			);
+			name = DiskCacheManager;
+			sourceTree = "<group>";
+		};
+		4B8BF3AA17DB50220062BB8E /* MemoryCacheManager */ = {
+			isa = PBXGroup;
+			children = (
+				4B8BF3AB17DB50430062BB8E /* ADMemoryCacheManager.h */,
+				4B8BF3AC17DB50430062BB8E /* ADMemoryCacheManager.m */,
+			);
+			name = MemoryCacheManager;
 			sourceTree = "<group>";
 		};
 		4BA4AD1A17CCDC3300521FBA /* DataManager */ = {
@@ -436,11 +462,13 @@
 				4B1BA81C17ACF8F600FA63EB /* ADTabbarViewController.m in Sources */,
 				4B8BF3A517DACFDC0062BB8E /* ADMyServerClient.m in Sources */,
 				4BA4B0EF17C88E1300F148FF /* ADPhotoEditView.m in Sources */,
+				4B8BF3A917DB41560062BB8E /* ADDiskCacheManager.m in Sources */,
 				4BA4B0F217C9C21400F148FF /* ADExploreViewController.m in Sources */,
 				4BA4B0F617C9C25200F148FF /* ADMeViewController.m in Sources */,
 				4BA4B0FA17C9C76700F148FF /* ADLoginViewController.m in Sources */,
 				4BA4B11017C9EA1A00F148FF /* AFHTTPClient.m in Sources */,
 				4BA4B11117C9EA1A00F148FF /* AFHTTPRequestOperation.m in Sources */,
+				4B8BF3AD17DB50430062BB8E /* ADMemoryCacheManager.m in Sources */,
 				4BA4B11217C9EA1A00F148FF /* AFImageRequestOperation.m in Sources */,
 				4BA4B11317C9EA1A00F148FF /* AFJSONRequestOperation.m in Sources */,
 				4BA4B11417C9EA1A00F148FF /* AFNetworkActivityIndicatorManager.m in Sources */,

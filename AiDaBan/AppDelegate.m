@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-//#import "WeiboSDK.h"
 
 @implementation AppDelegate
 
@@ -21,7 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [WeiboSDK enableDebugMode:YES];
-    [WeiboSDK registerApp:kAppKey];
+    [WeiboSDK registerApp:AD_SINA_kAppKey];
 
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
@@ -88,26 +87,9 @@
         if ([userInfoStr isEqualToString:@"ADLoginViewController"]) {
             
             if (response.statusCode == 0) {
-                NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-                [userDefaults setObject:[(WBAuthorizeResponse *)response userID] forKey:AD_SINA_USER_ID];
-                [userDefaults setObject:[(WBAuthorizeResponse *)response accessToken] forKey:AD_SINA_ACCESS_TOKEN];
-                [userDefaults setObject:[(WBAuthorizeResponse *)response expirationDate] forKey:AD_SINA_TOKEN_EXPIRATION_DATE];
-                [userDefaults synchronize];
+                [[ADDataController sharedDataController]saveSinaLoginInfo:response];
                 
-                [[ADDataController sharedDataController]getSinaUserInfo:^(ADUser *sinaUser){
-                    NSLog(@"---%@---\n",sinaUser.name);
-                    NSLog(@"---%@---\n",sinaUser.profile_image_url);
-                    NSLog(@"---%@---\n",sinaUser.gender);
-                } failure:^(NSError *error){
-                    
-                }];
-                
-                [[ADDataController sharedDataController]getMyUserToken:^(NSString *userToken){
-                    
-                    NSString *myUserToken = userToken;
-                }failure:^(NSError *error){
-                    
-                }];
+                [[NSNotificationCenter defaultCenter]postNotificationName:AD_SINA_GET_TOKEN_SUCCESS object:nil];
             }
         }
     }

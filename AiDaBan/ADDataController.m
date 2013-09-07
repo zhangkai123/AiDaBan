@@ -8,17 +8,18 @@
 
 #import "ADDataController.h"
 #import "ADNetworkManager.h"
+#import "ADDiskCacheManager.h"
 
 @implementation ADDataController
 +(id)sharedDataController
 {
-    static ADDataController *loginDataController;
+    static ADDataController *dataController;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         
-        loginDataController = [[ADDataController alloc]init];
+        dataController = [[ADDataController alloc]init];
     });
-    return loginDataController;
+    return dataController;
 }
 -(id)init
 {
@@ -26,19 +27,18 @@
     }
     return self;
 }
--(void)getSinaUserInfo:(void(^)(ADUser *sinaUser))sinaUserInfo failure:(void (^)(NSError *error))failure
+-(void)saveSinaLoginInfo:(WBBaseResponse *)response
 {
-    [[ADNetworkManager sharedNetworkManager]sendSinaUserInfoRequest:^(id JSON){
-        ADUser *userInfo = [[ADUser alloc]initWithJsonData:JSON];
-        sinaUserInfo(userInfo);
-        [userInfo release];
-    } failure:^(NSError *error){
-        failure(error);
-    }];
+    [[ADDiskCacheManager sharedDiskCacheManager]saveSinaLoginInfo:response];
 }
+
+
+
 -(void)getMyUserToken:(void (^)(NSString *userToken))myUserToken failure:(void (^)(NSError *error))failure
 {
-    [[ADNetworkManager sharedNetworkManager]sendUserTokenToServerForLogin:^(id JSON){
+    NSDictionary *sinaLoginInfo = [[ADDiskCacheManager sharedDiskCacheManager]getSinaLoginInfo];
+    NSString *sinaUserAccessToken = [sinaLoginInfo objectForKey:AD_SINA_ACCESS_TOKEN];
+    [[ADNetworkManager sharedNetworkManager]sendUserTokenToServerForLogin:sinaUserAccessToken success:^(id JSON){
         
         NSString *success = [JSON objectForKey:@"status"];
         if ([success isEqualToString:@"success"]) {
@@ -50,6 +50,19 @@
         }
     }failure:^(NSError *error){
         
+    }];
+}
+-(void)getSinaUserInfo:(void(^)(ADUser *sinaUser))sinaUserInfo failure:(void (^)(NSError *error))failure
+{
+    NSDictionary *sinaLoginInfo = [[ADDiskCacheManager sharedDiskCacheManager]getSinaLoginInfo];
+    [[ADNetworkManager sharedNetworkManager] sendSinaUserInfoRequest:sinaLoginInfo success:^(id JSON){
+        NSDictionary *userDataDic = [NSDictionary dictionaryWithDictionary:JSON];
+        
+        ADUser *userInfo = [[ADUser alloc]initWithJsonData:JSON];
+        sinaUserInfo(userInfo);
+        [userInfo release];
+    } failure:^(NSError *error){
+        failure(error);
     }];
 }
 @end

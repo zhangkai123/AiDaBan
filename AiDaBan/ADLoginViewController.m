@@ -64,7 +64,39 @@
     [loginButton addTarget:self action:@selector(login) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:loginButton];
     [loginButton release];
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(sinaWeiboHaveGetToken) name:AD_SINA_GET_TOKEN_SUCCESS object:nil];
 }
+
+#pragma sina weibo login
+-(void)sinaWeiboLogin
+{
+    WBAuthorizeRequest *request = [WBAuthorizeRequest request];
+    request.redirectURI = AD_SINA_kRedirectURI;
+    request.scope = @"all";
+    request.userInfo = @{@"SSO_From": @"ADLoginViewController"};
+    [WeiboSDK sendRequest:request];
+}
+-(void)sinaWeiboHaveGetToken
+{
+    [[ADDataController sharedDataController]getMyUserToken:^(NSString *userToken){
+        
+        [self getSinaUserInformation];
+    }failure:^(NSError *error){
+        
+    }];
+}
+-(void)getSinaUserInformation
+{
+    [[ADDataController sharedDataController]getSinaUserInfo:^(ADUser *sinaUser){
+        
+        [self dismissViewControllerAnimated:YES completion:nil];
+    } failure:^(NSError *error){
+        
+    }];
+}
+
+
 -(void)goBack
 {
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -72,14 +104,6 @@
 -(void)qqLogin
 {
     
-}
--(void)sinaWeiboLogin
-{
-    WBAuthorizeRequest *request = [WBAuthorizeRequest request];
-    request.redirectURI = kRedirectURI;
-    request.scope = @"all";
-    request.userInfo = @{@"SSO_From": @"ADLoginViewController"};
-    [WeiboSDK sendRequest:request];
 }
 -(void)registerUser
 {

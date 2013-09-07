@@ -13,6 +13,8 @@
 
 
 +(id)sharedDataController;
+
+-(void)saveSinaLoginInfo:(WBBaseResponse *)response;
 -(void)getSinaUserInfo:(void(^)(ADUser *sinaUser))sinaUserInfo failure:(void (^)(NSError *error))failure;
 -(void)getMyUserToken:(void (^)(NSString *userToken))myUserToken failure:(void (^)(NSError *error))failure;
 @end
