@@ -55,6 +55,12 @@
     [userDefaults setObject:userInfo forKey:AD_USER_INFO];
     [userDefaults synchronize];
 }
+-(NSDictionary *)getUserInfoFromDisk
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSDictionary *userInfo = [userDefaults objectForKey:AD_USER_INFO];
+    return userInfo;
+}
 -(void)saveUserLoginMask:(BOOL)logined
 {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];

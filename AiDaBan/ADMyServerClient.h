@@ -6,8 +6,6 @@
 //  Copyright (c) 2013 zhang kai. All rights reserved.
 //
 
-#import "AFNetworking.h"
-
 @interface ADMyServerClient : AFHTTPClient
 
 +(ADMyServerClient *)sharedClient;

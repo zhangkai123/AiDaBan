@@ -14,6 +14,7 @@
 
 +(id)sharedDataController;
 
+-(ADUser *)getUserInfo;
 -(BOOL)getUserLoginMask;
 -(void)saveSinaLoginInfo:(WBBaseResponse *)response;
 -(void)getSinaUserInfo:(void(^)(ADUser *sinaUser))sinaUserInfo failure:(void (^)(NSError *error))failure;

@@ -15,6 +15,7 @@
 -(void)saveSinaLoginInfo:(WBBaseResponse *)response;
 -(NSDictionary *)getSinaLoginInfo;
 -(void)saveUserInfo:(ADUser *)user;
+-(NSDictionary *)getUserInfoFromDisk;
 -(void)saveUserLoginMask:(BOOL)logined;
 -(BOOL)getUserLoginMask;
 @end

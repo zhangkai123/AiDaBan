@@ -15,4 +15,5 @@
 @property(nonatomic,retain) NSString *profile_image_url;
 
 -(id)initWithJsonData:(id)json;
+-(id)initWithDictionaryData:(NSDictionary *)dic;
 @end

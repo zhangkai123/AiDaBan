@@ -21,6 +21,14 @@
     }
     return self;
 }
-
-
+-(id)initWithDictionaryData:(NSDictionary *)dic
+{
+    if (self = [super init]) {
+        
+        self.name = [dic objectForKey:AD_USER_NAME];
+        self.gender = [dic objectForKey:AD_USER_GENDER];
+        self.profile_image_url = [dic objectForKey:AD_USER_IMAGE_URL];
+    }
+    return self;
+}
 @end

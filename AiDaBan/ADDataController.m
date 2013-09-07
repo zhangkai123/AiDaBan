@@ -35,7 +35,12 @@
 {
     return [[ADDiskCacheManager sharedDiskCacheManager]getUserLoginMask];
 }
-
+-(ADUser *)getUserInfo
+{
+    NSDictionary *userInfoDic = [[ADDiskCacheManager sharedDiskCacheManager]getUserInfoFromDisk];
+    ADUser *userInfo = [[ADUser alloc]initWithDictionaryData:userInfoDic];
+    return userInfo;
+}
 
 
 -(void)getMyUserToken:(void (^)(NSString *userToken))myUserToken failure:(void (^)(NSError *error))failure

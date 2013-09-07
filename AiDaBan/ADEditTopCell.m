@@ -15,8 +15,9 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
-        UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 10, 80, 80)];
-        imageView.image = [UIImage imageNamed:@"laopo.jpg"];
+        UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 10, 50, 50)];
+        ADUser *user = [[ADDataController sharedDataController]getUserInfo];
+        [imageView setImageWithURL:[NSURL URLWithString:user.profile_image_url] placeholderImage:nil];
         [self addSubview:imageView];
         [imageView release];
         
