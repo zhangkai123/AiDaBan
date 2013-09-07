@@ -14,4 +14,7 @@
 +(id)sharedDiskCacheManager;
 -(void)saveSinaLoginInfo:(WBBaseResponse *)response;
 -(NSDictionary *)getSinaLoginInfo;
+-(void)saveUserInfo:(ADUser *)user;
+-(void)saveUserLoginMask:(BOOL)logined;
+-(BOOL)getUserLoginMask;
 @end

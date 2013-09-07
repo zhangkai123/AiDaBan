@@ -55,12 +55,15 @@
 }
 -(void)addContent
 {
-//    ADEditViewController *viewController = [[ADEditViewController alloc]init];
-//    [self presentViewController:viewController animated:YES completion:nil];
-//    [viewController release];
-    
-    ADLoginViewController *loginViewController = [[ADLoginViewController alloc]init];
-    [self presentViewController:loginViewController animated:YES completion:nil];
-    [loginViewController release];
+    BOOL userLoginMask = [[ADDataController sharedDataController]getUserLoginMask];
+    if (userLoginMask) {
+        ADEditViewController *viewController = [[ADEditViewController alloc]init];
+        [self presentViewController:viewController animated:YES completion:nil];
+        [viewController release];
+    }else{
+        ADLoginViewController *loginViewController = [[ADLoginViewController alloc]init];
+        [self presentViewController:loginViewController animated:YES completion:nil];
+        [loginViewController release];
+    }
 }
 @end

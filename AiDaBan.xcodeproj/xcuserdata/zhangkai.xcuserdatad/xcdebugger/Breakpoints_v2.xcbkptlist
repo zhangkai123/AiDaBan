@@ -133,13 +133,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AiDaBan/ADDataController.m"
-            timestampString = "400248186.703489"
+            filePath = "AiDaBan/ADTabbarViewController.m"
+            timestampString = "400252494.694742"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "-getSinaUserInfo:failure:"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "-addContent"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

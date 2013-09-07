@@ -31,6 +31,10 @@
 {
     [[ADDiskCacheManager sharedDiskCacheManager]saveSinaLoginInfo:response];
 }
+-(BOOL)getUserLoginMask
+{
+    return [[ADDiskCacheManager sharedDiskCacheManager]getUserLoginMask];
+}
 
 
 
@@ -56,11 +60,12 @@
 {
     NSDictionary *sinaLoginInfo = [[ADDiskCacheManager sharedDiskCacheManager]getSinaLoginInfo];
     [[ADNetworkManager sharedNetworkManager] sendSinaUserInfoRequest:sinaLoginInfo success:^(id JSON){
-        NSDictionary *userDataDic = [NSDictionary dictionaryWithDictionary:JSON];
         
         ADUser *userInfo = [[ADUser alloc]initWithJsonData:JSON];
+        [[ADDiskCacheManager sharedDiskCacheManager]saveUserInfo:userInfo];
         sinaUserInfo(userInfo);
         [userInfo release];
+        [[ADDiskCacheManager sharedDiskCacheManager]saveUserLoginMask:YES];
     } failure:^(NSError *error){
         failure(error);
     }];

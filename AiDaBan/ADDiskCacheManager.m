@@ -43,4 +43,28 @@
     NSDictionary *sinaUserLoginInfo = [userDefaults objectForKey:AD_SINA_USER_LOGIN_INFO];
     return sinaUserLoginInfo;
 }
+-(void)saveUserInfo:(ADUser *)user
+{
+    NSString *name = [user name];
+    NSString *gender = [user gender];
+    NSString *profile_image_url = [user profile_image_url];
+    NSDictionary *userInfo = [NSDictionary dictionaryWithObjectsAndKeys:name,AD_USER_NAME,
+                              gender,AD_USER_GENDER,
+                              profile_image_url,AD_USER_IMAGE_URL, nil];
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:userInfo forKey:AD_USER_INFO];
+    [userDefaults synchronize];
+}
+-(void)saveUserLoginMask:(BOOL)logined
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setBool:logined forKey:AD_USER_HAVE_LOGIN];
+    [userDefaults synchronize];
+}
+-(BOOL)getUserLoginMask
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    BOOL loginMask = [userDefaults boolForKey:AD_USER_HAVE_LOGIN];
+    return loginMask;
+}
 @end
