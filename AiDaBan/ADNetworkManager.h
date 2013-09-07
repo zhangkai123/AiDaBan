@@ -12,4 +12,5 @@
 
 +(id)sharedNetworkManager;
 -(void)sendSinaUserInfoRequest:(void (^)(id JSON))success failure:(void (^)(NSError *error))failure;
+-(void)sendUserTokenToServerForLogin:(void (^)(id JSON))success failure:(void (^)(NSError *error))failure;
 @end

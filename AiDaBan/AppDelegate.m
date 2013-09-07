@@ -89,9 +89,9 @@
             
             if (response.statusCode == 0) {
                 NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-                [userDefaults setObject:[(WBAuthorizeResponse *)response userID] forKey:AD_USER_ID];
-                [userDefaults setObject:[(WBAuthorizeResponse *)response accessToken] forKey:AD_ACCESS_TOKEN];
-                [userDefaults setObject:[(WBAuthorizeResponse *)response expirationDate] forKey:AD_EXPIRATION_DATE];
+                [userDefaults setObject:[(WBAuthorizeResponse *)response userID] forKey:AD_SINA_USER_ID];
+                [userDefaults setObject:[(WBAuthorizeResponse *)response accessToken] forKey:AD_SINA_ACCESS_TOKEN];
+                [userDefaults setObject:[(WBAuthorizeResponse *)response expirationDate] forKey:AD_SINA_TOKEN_EXPIRATION_DATE];
                 [userDefaults synchronize];
                 
                 [[ADDataController sharedDataController]getSinaUserInfo:^(ADUser *sinaUser){
@@ -99,6 +99,13 @@
                     NSLog(@"---%@---\n",sinaUser.profile_image_url);
                     NSLog(@"---%@---\n",sinaUser.gender);
                 } failure:^(NSError *error){
+                    
+                }];
+                
+                [[ADDataController sharedDataController]getMyUserToken:^(NSString *userToken){
+                    
+                    NSString *myUserToken = userToken;
+                }failure:^(NSError *error){
                     
                 }];
             }

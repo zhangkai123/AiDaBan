@@ -36,8 +36,20 @@
         failure(error);
     }];
 }
--(void)saveUserInfoToServer:(ADUser *)userInfo
+-(void)getMyUserToken:(void (^)(NSString *userToken))myUserToken failure:(void (^)(NSError *error))failure
 {
-    
+    [[ADNetworkManager sharedNetworkManager]sendUserTokenToServerForLogin:^(id JSON){
+        
+        NSString *success = [JSON objectForKey:@"status"];
+        if ([success isEqualToString:@"success"]) {
+            NSString *myAccessToken = [JSON objectForKey:@"myAccessToken"];
+            NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+            [userDefaults setObject:myAccessToken forKey:AD_MY_ACCESS_TOKEN];
+            [userDefaults synchronize];
+            myUserToken(myAccessToken);
+        }
+    }failure:^(NSError *error){
+        
+    }];
 }
 @end

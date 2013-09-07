@@ -8,6 +8,7 @@
 
 #import "ADNetworkManager.h"
 #import "ADSinaAPIClient.h"
+#import "ADMyServerClient.h"
 
 @implementation ADNetworkManager
 +(id)sharedNetworkManager
@@ -32,8 +33,8 @@
     ADSinaAPIClient *client = [ADSinaAPIClient sharedClient];
     
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    NSString *userId = [userDefaults objectForKey:AD_USER_ID];
-    NSString *accessToken = [userDefaults objectForKey:AD_ACCESS_TOKEN];
+    NSString *userId = [userDefaults objectForKey:AD_SINA_USER_ID];
+    NSString *accessToken = [userDefaults objectForKey:AD_SINA_ACCESS_TOKEN];
     
     NSString *path = @"users/show.json";
     NSDictionary *paraDic = [NSDictionary dictionaryWithObjectsAndKeys:userId,@"uid",accessToken,@"access_token", nil];
@@ -48,5 +49,24 @@
     }];
     [operation start];
 }
-
+-(void)sendUserTokenToServerForLogin:(void (^)(id JSON))success failure:(void (^)(NSError *error))failure
+{
+    ADMyServerClient *client = [ADMyServerClient sharedClient];
+    
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSString *accessToken = [userDefaults objectForKey:AD_SINA_ACCESS_TOKEN];
+    
+    NSString *path = @"Login/ThirdPartyUserLogin";
+    NSDictionary *paraDic = [NSDictionary dictionaryWithObjectsAndKeys:@"sina",@"user_category",accessToken,@"access_token", nil];
+    NSURLRequest *request = [client requestWithMethod:@"GET" path:path parameters:paraDic];
+    
+    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+        
+        success(JSON);
+    }failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+        
+        failure(error);
+    }];
+    [operation start];
+}
 @end
