@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ADLoginViewController : UIViewController
+@protocol ADLoginViewControllerDelegate <NSObject>
 
+-(void)removeMeLoginButtonAfterLogin;
+
+@end
+
+@interface ADLoginViewController : UIViewController
+{
+    id<ADLoginViewControllerDelegate> delegate;
+}
+@property(nonatomic,assign) id<ADLoginViewControllerDelegate> delegate;
 @end

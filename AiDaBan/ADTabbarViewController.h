@@ -26,9 +26,11 @@
 //
 
 #import "ADTabbarBaseViewController.h"
+#import "ADLoginViewController.h"
 
-@interface ADTabbarViewController : ADTabbarBaseViewController
+@interface ADTabbarViewController : ADTabbarBaseViewController<ADLoginViewControllerDelegate>
 {
+    UIButton *meLoginButton;
 }
 
 @end

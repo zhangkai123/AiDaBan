@@ -13,7 +13,12 @@
 @end
 
 @implementation ADLoginViewController
+@synthesize delegate;
 
+-(void)dealloc
+{
+    [super dealloc];
+}
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -90,6 +95,7 @@
 {
     [[ADDataController sharedDataController]getSinaUserInfo:^(ADUser *sinaUser){
         
+        [self.delegate removeMeLoginButtonAfterLogin];
         [self dismissViewControllerAnimated:YES completion:nil];
     } failure:^(NSError *error){
         

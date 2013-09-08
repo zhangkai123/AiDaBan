@@ -32,6 +32,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor blueColor];
 	// Do any additional setup after loading the view, typically from a nib.
     UIView *topBarView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 44)];
     topBarView.backgroundColor = [UIColor yellowColor];
@@ -55,12 +56,12 @@
     [topBarView release];
     
     CGRect screenRect = [[UIScreen mainScreen] bounds];
-    theTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 44, 320, screenRect.size.height - 44 - 50 - 20)];
+    theTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 44, 320, screenRect.size.height - 44 - 50)];
     theTableView.delegate = self;
     theTableView.dataSource = self;
     [self.view addSubview:theTableView];
     
-    UIView *bottomBarView = [[UIView alloc]initWithFrame:CGRectMake(0, screenRect.size.height - 50 - 20, 320, 50)];
+    UIView *bottomBarView = [[UIView alloc]initWithFrame:CGRectMake(0, screenRect.size.height - 50, 320, 50)];
     bottomBarView.backgroundColor = [UIColor blueColor];
     
     UIButton *finshButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 106, 50)];

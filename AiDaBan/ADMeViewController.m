@@ -7,7 +7,6 @@
 //
 
 #import "ADMeViewController.h"
-#import "ADLoginViewController.h"
 
 @interface ADMeViewController ()
 
@@ -26,10 +25,6 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
-    ADLoginViewController *loginViewController = [[ADLoginViewController alloc]init];
-    [self presentViewController:loginViewController animated:YES completion:nil];
-    [loginViewController release];
 }
 - (void)viewDidLoad
 {

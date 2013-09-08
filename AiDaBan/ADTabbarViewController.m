@@ -30,8 +30,6 @@
 #import "ADEditViewController.h"
 #import "ADMeViewController.h"
 
-#import "ADLoginViewController.h"
-
 @implementation ADTabbarViewController
 
 - (void)viewDidLoad
@@ -47,11 +45,43 @@
     self.viewControllers = [NSArray arrayWithObjects:
                             exploreViewController,
                             [self viewControllerWithTabTitle:@"编辑" image:nil],
-                            meViewController, nil];    
-}
--(void)viewWillAppear:(BOOL)animated
-{
+                            meViewController, nil];
+    
     [self addCenterButtonWithImage:[UIImage imageNamed:@"cameraTabBarItem.png"] highlightImage:nil];
+    BOOL userLoginMask = [[ADDataController sharedDataController]getUserLoginMask];
+    if (!userLoginMask) {
+        [self addMeButton];
+    }
+}
+// Create a custom UIButton and add it to the center of our tab bar
+-(void) addCenterButtonWithImage:(UIImage*)buttonImage highlightImage:(UIImage*)highlightImage
+{
+    UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleTopMargin;
+    button.frame = CGRectMake(0.0, 0.0, 320/3, buttonImage.size.height);
+    [button setBackgroundImage:buttonImage forState:UIControlStateNormal];
+    [button setBackgroundImage:highlightImage forState:UIControlStateHighlighted];
+    [button addTarget:self action:@selector(addContent) forControlEvents:UIControlEventTouchUpInside];
+    
+    CGFloat heightDifference = buttonImage.size.height - self.tabBar.frame.size.height;
+    if (heightDifference < 0)
+        button.center = self.tabBar.center;
+    else
+    {
+        CGPoint center = self.tabBar.center;
+        center.y = center.y - heightDifference/2.0;
+        button.center = center;
+    }
+    
+    [self.view addSubview:button];
+}
+-(void)addMeButton
+{
+    meLoginButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    meLoginButton.backgroundColor = [UIColor grayColor];
+    meLoginButton.frame = CGRectMake(320/3*2, self.tabBar.frame.origin.y, 320/3, self.tabBar.frame.size.height);
+    [meLoginButton addTarget:self action:@selector(presentLoginView) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:meLoginButton];
 }
 -(void)addContent
 {
@@ -61,9 +91,19 @@
         [self presentViewController:viewController animated:YES completion:nil];
         [viewController release];
     }else{
-        ADLoginViewController *loginViewController = [[ADLoginViewController alloc]init];
-        [self presentViewController:loginViewController animated:YES completion:nil];
-        [loginViewController release];
+        [self presentLoginView];
     }
+}
+-(void)presentLoginView
+{
+    ADLoginViewController *loginViewController = [[ADLoginViewController alloc]init];
+    loginViewController.delegate = self;
+    [self presentViewController:loginViewController animated:YES completion:nil];
+    [loginViewController release];
+}
+
+-(void)removeMeLoginButtonAfterLogin
+{
+    [meLoginButton removeFromSuperview];
 }
 @end
