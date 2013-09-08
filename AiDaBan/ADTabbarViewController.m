@@ -78,7 +78,6 @@
 -(void)addMeButton
 {
     meLoginButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    meLoginButton.backgroundColor = [UIColor grayColor];
     meLoginButton.frame = CGRectMake(320/3*2, self.tabBar.frame.origin.y, 320/3, self.tabBar.frame.size.height);
     [meLoginButton addTarget:self action:@selector(presentLoginView) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:meLoginButton];
