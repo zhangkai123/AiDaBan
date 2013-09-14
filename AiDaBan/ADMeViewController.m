@@ -35,12 +35,12 @@
     ADUser *user = [[ADDataController sharedDataController]getUserInfo];
     
     UIView *topBarView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 44)];
-    topBarView.backgroundColor = [UIColor yellowColor];
+    topBarView.backgroundColor = UIColorFromRGB(0xC0003D);
     
     UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(20, 0, 280, 44)];
     titleLabel.text = @"我的";
     titleLabel.backgroundColor = [UIColor clearColor];
-    titleLabel.textColor = [UIColor blackColor];
+    titleLabel.textColor = [UIColor whiteColor];
     titleLabel.textAlignment = NSTextAlignmentCenter;
     [topBarView addSubview:titleLabel];
     [titleLabel release];
