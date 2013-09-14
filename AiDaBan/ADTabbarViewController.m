@@ -52,6 +52,8 @@
     if (!userLoginMask) {
         [self addMeButton];
     }
+    self.tabBar.barTintColor = UIColorFromRGB(0x5C5C5C);
+    [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
 }
 // Create a custom UIButton and add it to the center of our tab bar
 -(void) addCenterButtonWithImage:(UIImage*)buttonImage highlightImage:(UIImage*)highlightImage

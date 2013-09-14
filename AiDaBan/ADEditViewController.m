@@ -68,24 +68,24 @@
     
     UIButton *finshButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 106, 50)];
     [finshButton setTitle:@"完成" forState:UIControlStateNormal];
-    [finshButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    finshButton.backgroundColor = UIColorFromRGB(0xD7D7D7);
+    [finshButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    finshButton.backgroundColor = UIColorFromRGB(0x5C5C5C);
     [finshButton addTarget:self action:@selector(finishEdit) forControlEvents:UIControlEventTouchUpInside];
     [bottomBarView addSubview:finshButton];
     [finshButton release];
     
-    UIButton *editButton = [[UIButton alloc]initWithFrame:CGRectMake(107, 0, 106, 50)];
+    UIButton *editButton = [[UIButton alloc]initWithFrame:CGRectMake(106, 0, 108, 50)];
     [editButton setTitle:@"编辑" forState:UIControlStateNormal];
-    [editButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    editButton.backgroundColor = UIColorFromRGB(0xD7D7D7);
+    [editButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    editButton.backgroundColor = UIColorFromRGB(0xC0003D);
     [editButton addTarget:self action:@selector(startEdit) forControlEvents:UIControlEventTouchUpInside];
     [bottomBarView addSubview:editButton];
     [editButton release];
 
     UIButton *previewButton = [[UIButton alloc]initWithFrame:CGRectMake(214, 0, 106, 50)];
     [previewButton setTitle:@"预览" forState:UIControlStateNormal];
-    [previewButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    previewButton.backgroundColor = UIColorFromRGB(0xD7D7D7);
+    [previewButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    previewButton.backgroundColor = UIColorFromRGB(0x5C5C5C);
     [previewButton addTarget:self action:@selector(preView) forControlEvents:UIControlEventTouchUpInside];
     [bottomBarView addSubview:previewButton];
     [previewButton release];
