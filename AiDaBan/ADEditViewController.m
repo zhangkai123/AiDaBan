@@ -19,6 +19,8 @@
     UITableView *theTableView;
     
     ADPhotoEditView *photoEditView;
+    
+    ADUser *user;
 }
 @end
 
@@ -93,6 +95,8 @@
     photoEditView = [[ADPhotoEditView alloc]initWithFrame:CGRectMake(0, 0, 320, 460)];
     [self.view addSubview:photoEditView];
     photoEditView.hidden = YES;
+    
+    user = [[ADDataController sharedDataController]getUserInfo];
 }
 -(void)goBack
 {
@@ -145,6 +149,7 @@
         if (!cell) {
             cell = [[[ADEditTopCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"topCell"]autorelease];
         }
+        [cell.imageView setImageWithURL:[NSURL URLWithString:user.profile_image_url] placeholderImage:nil];
     }else{
         cell = [tableView dequeueReusableCellWithIdentifier:@"topCell"];
         if (!cell) {

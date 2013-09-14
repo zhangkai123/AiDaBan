@@ -9,5 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface ADEditTopCell : UITableViewCell
-
+{
+    UIImageView *imageView;
+    UILabel *topicLabel;
+    UILabel *dateLabel;
+}
+@property(nonatomic,retain) UIImageView *imageView;
+@property(nonatomic,retain) UILabel *topicLabel;
+@property(nonatomic,retain) UILabel *dateLabel;
 @end

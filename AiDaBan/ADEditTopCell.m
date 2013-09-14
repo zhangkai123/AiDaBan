@@ -9,24 +9,29 @@
 #import "ADEditTopCell.h"
 
 @implementation ADEditTopCell
+@synthesize imageView ,topicLabel, dateLabel;
+-(void)dealloc
+{
+    [imageView release];
+    [topicLabel release];
+    [dateLabel release];
+    [super dealloc];
+}
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
-        UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 10, 50, 50)];
-        ADUser *user = [[ADDataController sharedDataController]getUserInfo];
-        [imageView setImageWithURL:[NSURL URLWithString:user.profile_image_url] placeholderImage:nil];
+        imageView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 10, 50, 50)];
         [self addSubview:imageView];
-        [imageView release];
         
-        UILabel *topicLabel = [[UILabel alloc]initWithFrame:CGRectMake(100, 26, 200, 40)];
+        topicLabel = [[UILabel alloc]initWithFrame:CGRectMake(100, 26, 200, 40)];
         topicLabel.backgroundColor = [UIColor blueColor];
         topicLabel.text = @"教程名";
         [self addSubview:topicLabel];
         
-        UILabel *dateLabel = [[UILabel alloc]initWithFrame:CGRectMake(100, 66, 200, 20)];
+        dateLabel = [[UILabel alloc]initWithFrame:CGRectMake(100, 66, 200, 20)];
         dateLabel.backgroundColor = [UIColor yellowColor];
         dateLabel.text = @"2013.07.27";
         [self addSubview:dateLabel];
