@@ -59,8 +59,9 @@
     UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleTopMargin;
     button.frame = CGRectMake(0.0, 0.0, 320/3, buttonImage.size.height);
-    [button setBackgroundImage:buttonImage forState:UIControlStateNormal];
-    [button setBackgroundImage:highlightImage forState:UIControlStateHighlighted];
+//    [button setBackgroundImage:buttonImage forState:UIControlStateNormal];
+//    [button setBackgroundImage:highlightImage forState:UIControlStateHighlighted];
+    button.backgroundColor = UIColorFromRGB(0xC0003D);
     [button addTarget:self action:@selector(addContent) forControlEvents:UIControlEventTouchUpInside];
     
     CGFloat heightDifference = buttonImage.size.height - self.tabBar.frame.size.height;

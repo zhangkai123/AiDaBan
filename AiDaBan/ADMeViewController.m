@@ -46,8 +46,7 @@
     [titleLabel release];
     
     UIButton *setupButton = [[UIButton alloc]initWithFrame:CGRectMake(320 - 50, 5, 45, 34)];
-    [setupButton setTitle:@"Set" forState:UIControlStateNormal];
-    setupButton.backgroundColor = [UIColor blueColor];
+    [setupButton setImage:[UIImage imageNamed:@"set"] forState:UIControlStateNormal];
     
     [setupButton addTarget:self action:@selector(setUp) forControlEvents:UIControlEventTouchUpInside];
     [topBarView addSubview:setupButton];
@@ -57,7 +56,7 @@
     [topBarView release];
 
     UIView *profileView = [[UIView alloc]initWithFrame:CGRectMake(0, 44, 320, 68)];
-    profileView.backgroundColor = [UIColor blackColor];
+    profileView.backgroundColor = UIColorFromRGB(0x222222);
     
     UIImageView *profileImageView = [[UIImageView alloc]initWithFrame:CGRectMake(7, 7, 52, 52)];
     [profileImageView setImageWithURL:[NSURL URLWithString:user.profile_image_url] placeholderImage:nil];

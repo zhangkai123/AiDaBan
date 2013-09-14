@@ -39,9 +39,9 @@
     UIView *topBarView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 44)];
     topBarView.backgroundColor = UIColorFromRGB(0xC0003D);
     
-    UIButton *backButton = [[UIButton alloc]initWithFrame:CGRectMake(5, 5, 45, 34)];
-    [backButton setTitle:@"back" forState:UIControlStateNormal];
-    backButton.backgroundColor = [UIColor blueColor];
+    UIButton *backButton = [[UIButton alloc]initWithFrame:CGRectMake(5, 5, 39, 34)];
+    [backButton setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
+//    backButton.backgroundColor = UIColorFromRGB(0xD7D7D7);
     
     [backButton addTarget:self action:@selector(goBack) forControlEvents:UIControlEventTouchUpInside];
     [topBarView addSubview:backButton];

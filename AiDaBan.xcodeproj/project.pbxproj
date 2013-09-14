@@ -15,6 +15,10 @@
 		4B1BA81517ACF8B400FA63EB /* cameraTabBarItem@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B1BA81317ACF8B400FA63EB /* cameraTabBarItem@2x.png */; };
 		4B1BA81917ACF8E500FA63EB /* ADTabbarBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1BA81817ACF8E500FA63EB /* ADTabbarBaseViewController.m */; };
 		4B1BA81C17ACF8F600FA63EB /* ADTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1BA81B17ACF8F600FA63EB /* ADTabbarViewController.m */; };
+		4B5B6D3317E4A4C400FBC60B /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B5B6D3217E4A4C400FBC60B /* back.png */; };
+		4B5B6D3517E4A4CC00FBC60B /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B5B6D3417E4A4CC00FBC60B /* back@2x.png */; };
+		4B5B6D3817E4AB7700FBC60B /* set.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B5B6D3617E4AB7700FBC60B /* set.png */; };
+		4B5B6D3917E4AB7700FBC60B /* set@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B5B6D3717E4AB7700FBC60B /* set@2x.png */; };
 		4B6C206E17A4FFA8001441E4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B6C206D17A4FFA8001441E4 /* UIKit.framework */; };
 		4B6C207017A4FFA8001441E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B6C206F17A4FFA8001441E4 /* Foundation.framework */; };
 		4B6C207217A4FFA8001441E4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B6C207117A4FFA8001441E4 /* CoreGraphics.framework */; };
@@ -66,6 +70,10 @@
 		4B1BA81817ACF8E500FA63EB /* ADTabbarBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADTabbarBaseViewController.m; sourceTree = "<group>"; };
 		4B1BA81A17ACF8F600FA63EB /* ADTabbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADTabbarViewController.h; sourceTree = "<group>"; };
 		4B1BA81B17ACF8F600FA63EB /* ADTabbarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADTabbarViewController.m; sourceTree = "<group>"; };
+		4B5B6D3217E4A4C400FBC60B /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		4B5B6D3417E4A4CC00FBC60B /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
+		4B5B6D3617E4AB7700FBC60B /* set.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = set.png; sourceTree = "<group>"; };
+		4B5B6D3717E4AB7700FBC60B /* set@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "set@2x.png"; sourceTree = "<group>"; };
 		4B6C206A17A4FFA8001441E4 /* AiDaBan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AiDaBan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B6C206D17A4FFA8001441E4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4B6C206F17A4FFA8001441E4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -186,6 +194,17 @@
 			name = TabBar;
 			sourceTree = "<group>";
 		};
+		4B5B6D3117E4A4AC00FBC60B /* buttons */ = {
+			isa = PBXGroup;
+			children = (
+				4B5B6D3617E4AB7700FBC60B /* set.png */,
+				4B5B6D3717E4AB7700FBC60B /* set@2x.png */,
+				4B5B6D3217E4A4C400FBC60B /* back.png */,
+				4B5B6D3417E4A4CC00FBC60B /* back@2x.png */,
+			);
+			name = buttons;
+			sourceTree = "<group>";
+		};
 		4B6C206117A4FFA8001441E4 = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +263,7 @@
 		4B6C207417A4FFA8001441E4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4B5B6D3117E4A4AC00FBC60B /* buttons */,
 				4B1BA80817ACF87D00FA63EB /* Images */,
 				4B6C209017A5078A001441E4 /* laopo.jpg */,
 				4B6C207517A4FFA8001441E4 /* AiDaBan-Info.plist */,
@@ -435,7 +455,11 @@
 				4B6C207817A4FFA8001441E4 /* InfoPlist.strings in Resources */,
 				4B6C208017A4FFA8001441E4 /* Default.png in Resources */,
 				4B6C208217A4FFA8001441E4 /* Default@2x.png in Resources */,
+				4B5B6D3917E4AB7700FBC60B /* set@2x.png in Resources */,
+				4B5B6D3817E4AB7700FBC60B /* set.png in Resources */,
+				4B5B6D3317E4A4C400FBC60B /* back.png in Resources */,
 				4B6C208417A4FFA8001441E4 /* Default-568h@2x.png in Resources */,
+				4B5B6D3517E4A4CC00FBC60B /* back@2x.png in Resources */,
 				4B6C209117A5078A001441E4 /* laopo.jpg in Resources */,
 				4B1BA80C17ACF89800FA63EB /* 112-group.png in Resources */,
 				4B1BA80D17ACF89800FA63EB /* 112-group@2x.png in Resources */,

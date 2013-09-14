@@ -32,11 +32,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor grayColor];
+    self.view.backgroundColor = UIColorFromRGB(0xC0003D);
     
-    UIButton *backButton = [[UIButton alloc]initWithFrame:CGRectMake(5, 5, 45, 34)];
+    UIButton *backButton = [[UIButton alloc]initWithFrame:CGRectMake(5, 5, 32, 23)];
+    [backButton setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
     [backButton setTitle:@"back" forState:UIControlStateNormal];
-    backButton.backgroundColor = [UIColor blueColor];
+    backButton.backgroundColor = UIColorFromRGB(0xD7D7D7);
     
     [backButton addTarget:self action:@selector(goBack) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:backButton];
