@@ -23,16 +23,16 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
-        imageView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 10, 50, 50)];
+        imageView = [[UIImageView alloc]initWithFrame:CGRectMake(15, 12, 50, 50)];
         [self addSubview:imageView];
         
-        topicLabel = [[UILabel alloc]initWithFrame:CGRectMake(100, 26, 200, 40)];
-        topicLabel.backgroundColor = [UIColor blueColor];
+        topicLabel = [[UILabel alloc]initWithFrame:CGRectMake(73, 17, 200, 22)];
+        topicLabel.backgroundColor = [UIColor clearColor];
         topicLabel.text = @"教程名";
         [self addSubview:topicLabel];
         
-        dateLabel = [[UILabel alloc]initWithFrame:CGRectMake(100, 66, 200, 20)];
-        dateLabel.backgroundColor = [UIColor yellowColor];
+        dateLabel = [[UILabel alloc]initWithFrame:CGRectMake(80, 40, 200, 20)];
+        dateLabel.backgroundColor = [UIColor clearColor];
         dateLabel.text = @"2013.07.27";
         [self addSubview:dateLabel];
     }

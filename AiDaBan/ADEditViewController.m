@@ -92,7 +92,7 @@
     
     [self.view addSubview:bottomBarView];
     
-    photoEditView = [[ADPhotoEditView alloc]initWithFrame:CGRectMake(0, 0, 320, 460)];
+    photoEditView = [[ADPhotoEditView alloc]initWithFrame:CGRectMake(0, 0, 320, 480)];
     [self.view addSubview:photoEditView];
     photoEditView.hidden = YES;
     
