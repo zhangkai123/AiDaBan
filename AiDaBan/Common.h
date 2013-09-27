@@ -22,7 +22,7 @@
 #define AD_USER_HAVE_LOGIN @"ADUserHaveLogin"
 #define AD_MY_ACCESS_TOKEN @"ADMyAccessToken"
 //#define AD_MY_SERVER_BASE_URL @"http://localhost/Aidaban_server/webServices/"
-#define AD_MY_SERVER_BASE_URL @"http://192.168.1.102/Aidaban_server/webServices/"
+#define AD_MY_SERVER_BASE_URL @"http://192.168.1.105/Aidaban_server/webServices/"
 #define AD_USER_INFO @"ADUserInfo"
 #define AD_USER_NAME @"ADUserName"
 #define AD_USER_GENDER @"ADUserGender"

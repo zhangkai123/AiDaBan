@@ -36,7 +36,6 @@
 		4B8BF3AD17DB50430062BB8E /* ADMemoryCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8BF3AC17DB50430062BB8E /* ADMemoryCacheManager.m */; };
 		4BA4AD1E17CCDF5900521FBA /* ADDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA4AD1D17CCDF5900521FBA /* ADDataController.m */; };
 		4BA4AD2317CCE77300521FBA /* ADSinaAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA4AD2217CCE77300521FBA /* ADSinaAPIClient.m */; };
-		4BA4B0EF17C88E1300F148FF /* ADPhotoEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA4B0EE17C88E1300F148FF /* ADPhotoEditView.m */; };
 		4BA4B0F217C9C21400F148FF /* ADExploreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA4B0F117C9C21400F148FF /* ADExploreViewController.m */; };
 		4BA4B0F617C9C25200F148FF /* ADMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA4B0F517C9C25200F148FF /* ADMeViewController.m */; };
 		4BA4B0FA17C9C76700F148FF /* ADLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA4B0F917C9C76700F148FF /* ADLoginViewController.m */; };
@@ -53,6 +52,7 @@
 		4BA4B11E17C9EB3500F148FF /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BA4B11A17C9EB3500F148FF /* MobileCoreServices.framework */; };
 		4BA4B11F17C9EB3500F148FF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BA4B11B17C9EB3500F148FF /* Security.framework */; };
 		4BA4B12017C9EB3500F148FF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BA4B11C17C9EB3500F148FF /* SystemConfiguration.framework */; };
+		4BAEEDCF17F5BA6100B7F3BB /* ADPhotoEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAEEDCE17F5BA6100B7F3BB /* ADPhotoEditViewController.m */; };
 		4BBC58D617D8C1BC00612543 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BBC58D317D8C1BC00612543 /* libWeiboSDK.a */; };
 		4BBC58D717D8C1BC00612543 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4BBC58D417D8C1BC00612543 /* WeiboSDK.bundle */; };
 		4BC3383B17CE2A1C00F2ACFD /* ADNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC3383A17CE2A1C00F2ACFD /* ADNetworkManager.m */; };
@@ -103,8 +103,6 @@
 		4BA4AD2017CCE02E00521FBA /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		4BA4AD2117CCE77300521FBA /* ADSinaAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADSinaAPIClient.h; sourceTree = "<group>"; };
 		4BA4AD2217CCE77300521FBA /* ADSinaAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADSinaAPIClient.m; sourceTree = "<group>"; };
-		4BA4B0ED17C88E1300F148FF /* ADPhotoEditView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADPhotoEditView.h; sourceTree = "<group>"; };
-		4BA4B0EE17C88E1300F148FF /* ADPhotoEditView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADPhotoEditView.m; sourceTree = "<group>"; };
 		4BA4B0F017C9C21400F148FF /* ADExploreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADExploreViewController.h; sourceTree = "<group>"; };
 		4BA4B0F117C9C21400F148FF /* ADExploreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADExploreViewController.m; sourceTree = "<group>"; };
 		4BA4B0F417C9C25200F148FF /* ADMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADMeViewController.h; sourceTree = "<group>"; };
@@ -134,6 +132,8 @@
 		4BA4B11A17C9EB3500F148FF /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		4BA4B11B17C9EB3500F148FF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		4BA4B11C17C9EB3500F148FF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		4BAEEDCD17F5BA6100B7F3BB /* ADPhotoEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADPhotoEditViewController.h; sourceTree = "<group>"; };
+		4BAEEDCE17F5BA6100B7F3BB /* ADPhotoEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADPhotoEditViewController.m; sourceTree = "<group>"; };
 		4BBC58D317D8C1BC00612543 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
 		4BBC58D417D8C1BC00612543 /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
 		4BBC58D517D8C1BC00612543 /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
@@ -248,13 +248,11 @@
 				4B8BF3AA17DB50220062BB8E /* MemoryCacheManager */,
 				4BA4B0F717C9C73F00F148FF /* LoginViewController */,
 				4B1BA81617ACF8D400FA63EB /* TabBar */,
-				4BA4B0F317C9C22100F148FF /* TabViewControllers */,
+				4BAEEDD017F5CB5900B7F3BB /* ViewControllers */,
 				4B6C207C17A4FFA8001441E4 /* AppDelegate.h */,
 				4B6C207D17A4FFA8001441E4 /* AppDelegate.m */,
 				4B6C209217A54F64001441E4 /* ADEditTopCell.h */,
 				4B6C209317A54F64001441E4 /* ADEditTopCell.m */,
-				4BA4B0ED17C88E1300F148FF /* ADPhotoEditView.h */,
-				4BA4B0EE17C88E1300F148FF /* ADPhotoEditView.m */,
 				4B6C207417A4FFA8001441E4 /* Supporting Files */,
 			);
 			path = AiDaBan;
@@ -378,6 +376,16 @@
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
+		4BAEEDD017F5CB5900B7F3BB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4BA4B0F317C9C22100F148FF /* TabViewControllers */,
+				4BAEEDCD17F5BA6100B7F3BB /* ADPhotoEditViewController.h */,
+				4BAEEDCE17F5BA6100B7F3BB /* ADPhotoEditViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		4BBC58D217D8C1BC00612543 /* libWeiboSDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -485,7 +493,6 @@
 				4B1BA81917ACF8E500FA63EB /* ADTabbarBaseViewController.m in Sources */,
 				4B1BA81C17ACF8F600FA63EB /* ADTabbarViewController.m in Sources */,
 				4B8BF3A517DACFDC0062BB8E /* ADMyServerClient.m in Sources */,
-				4BA4B0EF17C88E1300F148FF /* ADPhotoEditView.m in Sources */,
 				4B8BF3A917DB41560062BB8E /* ADDiskCacheManager.m in Sources */,
 				4BA4B0F217C9C21400F148FF /* ADExploreViewController.m in Sources */,
 				4BA4B0F617C9C25200F148FF /* ADMeViewController.m in Sources */,
@@ -502,6 +509,7 @@
 				4BA4B11817C9EA1A00F148FF /* UIImageView+AFNetworking.m in Sources */,
 				4BA4AD1E17CCDF5900521FBA /* ADDataController.m in Sources */,
 				4BA4AD2317CCE77300521FBA /* ADSinaAPIClient.m in Sources */,
+				4BAEEDCF17F5BA6100B7F3BB /* ADPhotoEditViewController.m in Sources */,
 				4BC3383B17CE2A1C00F2ACFD /* ADNetworkManager.m in Sources */,
 				4BC3383E17CE300B00F2ACFD /* ADUser.m in Sources */,
 			);

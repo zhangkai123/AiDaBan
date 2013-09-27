@@ -8,17 +8,15 @@
 
 #import "ADEditViewController.h"
 #import "ADEditTopCell.h"
-#import "ADPhotoEditView.h"
+#import "ADPhotoEditViewController.h"
 
-@interface ADEditViewController ()<UITableViewDataSource,UITableViewDelegate,UIActionSheetDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
+@interface ADEditViewController ()<UITableViewDataSource,UITableViewDelegate,UIActionSheetDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate,ADPhotoEditViewControllerDelegate>
 {
     UILabel *topicLabel;
     UIImageView *topicImageView;
     UILabel *dateLabel;
     
     UITableView *theTableView;
-    
-    ADPhotoEditView *photoEditView;
     
     ADUser *user;
 }
@@ -28,7 +26,6 @@
 
 -(void)dealloc
 {
-    [photoEditView release];
     [super dealloc];
 }
 - (void)viewDidLoad
@@ -91,10 +88,6 @@
     [previewButton release];
     
     [self.view addSubview:bottomBarView];
-    
-    photoEditView = [[ADPhotoEditView alloc]initWithFrame:CGRectMake(0, 0, 320, 480)];
-    [self.view addSubview:photoEditView];
-    photoEditView.hidden = YES;
     
     user = [[ADDataController sharedDataController]getUserInfo];
 }
@@ -176,10 +169,7 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     UIImage *image = [info valueForKey:UIImagePickerControllerOriginalImage];
-    
-    photoEditView.hidden = NO;
-    photoEditView.photoView.image = image;
-    
+    [self showPhotoEditViewController:image];
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
@@ -194,6 +184,33 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+#pragma mark - ADPhotoEditViewControllerDelegate
+-(void)disMissPhotoEditViewController: (UIViewController*) content
+{
+    [content willMoveToParentViewController:nil];
+    [UIView animateWithDuration:0.6 animations:^{
+        content.view.frame = CGRectMake(0, content.view.frame.size.height, content.view.frame.size.width, content.view.frame.size.height);
+    }completion:^(BOOL finished){
+        [content.view removeFromSuperview];
+        [content removeFromParentViewController];
+    }];
+}
+#pragma mark - for child controller
+-(void)showPhotoEditViewController:(UIImage *)photo
+{
+    ADPhotoEditViewController *photoEditViewController = [[ADPhotoEditViewController alloc]init];
+    photoEditViewController.delegate = self;
+    photoEditViewController.myImage = photo;
+    [self displayContentController:photoEditViewController];
+    [photoEditViewController release];
+}
+- (void) displayContentController: (UIViewController*) content;
+{
+    [self addChildViewController:content];
+    content.view.frame = self.view.frame;
+    [self.view addSubview:content.view];
+    [content didMoveToParentViewController:self];
 }
 
 @end
