@@ -246,13 +246,10 @@
 				4BC3383817CE290900F2ACFD /* NetworkManager */,
 				4B8BF3A617DB33130062BB8E /* DiskCacheManager */,
 				4B8BF3AA17DB50220062BB8E /* MemoryCacheManager */,
-				4BA4B0F717C9C73F00F148FF /* LoginViewController */,
-				4B1BA81617ACF8D400FA63EB /* TabBar */,
 				4BAEEDD017F5CB5900B7F3BB /* ViewControllers */,
+				4BAEEDD117F5D02C00B7F3BB /* views */,
 				4B6C207C17A4FFA8001441E4 /* AppDelegate.h */,
 				4B6C207D17A4FFA8001441E4 /* AppDelegate.m */,
-				4B6C209217A54F64001441E4 /* ADEditTopCell.h */,
-				4B6C209317A54F64001441E4 /* ADEditTopCell.m */,
 				4B6C207417A4FFA8001441E4 /* Supporting Files */,
 			);
 			path = AiDaBan;
@@ -379,11 +376,22 @@
 		4BAEEDD017F5CB5900B7F3BB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4B1BA81617ACF8D400FA63EB /* TabBar */,
+				4BA4B0F717C9C73F00F148FF /* LoginViewController */,
 				4BA4B0F317C9C22100F148FF /* TabViewControllers */,
 				4BAEEDCD17F5BA6100B7F3BB /* ADPhotoEditViewController.h */,
 				4BAEEDCE17F5BA6100B7F3BB /* ADPhotoEditViewController.m */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4BAEEDD117F5D02C00B7F3BB /* views */ = {
+			isa = PBXGroup;
+			children = (
+				4B6C209217A54F64001441E4 /* ADEditTopCell.h */,
+				4B6C209317A54F64001441E4 /* ADEditTopCell.m */,
+			);
+			name = views;
 			sourceTree = "<group>";
 		};
 		4BBC58D217D8C1BC00612543 /* libWeiboSDK */ = {
