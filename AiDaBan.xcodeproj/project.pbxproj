@@ -53,6 +53,8 @@
 		4BA4B11F17C9EB3500F148FF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BA4B11B17C9EB3500F148FF /* Security.framework */; };
 		4BA4B12017C9EB3500F148FF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BA4B11C17C9EB3500F148FF /* SystemConfiguration.framework */; };
 		4BAEEDCF17F5BA6100B7F3BB /* ADPhotoEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAEEDCE17F5BA6100B7F3BB /* ADPhotoEditViewController.m */; };
+		4BAEEDD417F6B5F100B7F3BB /* ADAddTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAEEDD317F6B5F100B7F3BB /* ADAddTitleViewController.m */; };
+		4BAEEDDA17F6DCD200B7F3BB /* ADCourseCardEditCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAEEDD917F6DCD200B7F3BB /* ADCourseCardEditCell.m */; };
 		4BBC58D617D8C1BC00612543 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BBC58D317D8C1BC00612543 /* libWeiboSDK.a */; };
 		4BBC58D717D8C1BC00612543 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4BBC58D417D8C1BC00612543 /* WeiboSDK.bundle */; };
 		4BC3383B17CE2A1C00F2ACFD /* ADNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC3383A17CE2A1C00F2ACFD /* ADNetworkManager.m */; };
@@ -134,6 +136,10 @@
 		4BA4B11C17C9EB3500F148FF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		4BAEEDCD17F5BA6100B7F3BB /* ADPhotoEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADPhotoEditViewController.h; sourceTree = "<group>"; };
 		4BAEEDCE17F5BA6100B7F3BB /* ADPhotoEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADPhotoEditViewController.m; sourceTree = "<group>"; };
+		4BAEEDD217F6B5F100B7F3BB /* ADAddTitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADAddTitleViewController.h; sourceTree = "<group>"; };
+		4BAEEDD317F6B5F100B7F3BB /* ADAddTitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADAddTitleViewController.m; sourceTree = "<group>"; };
+		4BAEEDD817F6DCD200B7F3BB /* ADCourseCardEditCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADCourseCardEditCell.h; sourceTree = "<group>"; };
+		4BAEEDD917F6DCD200B7F3BB /* ADCourseCardEditCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADCourseCardEditCell.m; sourceTree = "<group>"; };
 		4BBC58D317D8C1BC00612543 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
 		4BBC58D417D8C1BC00612543 /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
 		4BBC58D517D8C1BC00612543 /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
@@ -381,6 +387,8 @@
 				4BA4B0F317C9C22100F148FF /* TabViewControllers */,
 				4BAEEDCD17F5BA6100B7F3BB /* ADPhotoEditViewController.h */,
 				4BAEEDCE17F5BA6100B7F3BB /* ADPhotoEditViewController.m */,
+				4BAEEDD217F6B5F100B7F3BB /* ADAddTitleViewController.h */,
+				4BAEEDD317F6B5F100B7F3BB /* ADAddTitleViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -390,6 +398,8 @@
 			children = (
 				4B6C209217A54F64001441E4 /* ADEditTopCell.h */,
 				4B6C209317A54F64001441E4 /* ADEditTopCell.m */,
+				4BAEEDD817F6DCD200B7F3BB /* ADCourseCardEditCell.h */,
+				4BAEEDD917F6DCD200B7F3BB /* ADCourseCardEditCell.m */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -494,6 +504,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BAEEDD417F6B5F100B7F3BB /* ADAddTitleViewController.m in Sources */,
 				4B6C207A17A4FFA8001441E4 /* main.m in Sources */,
 				4B6C207E17A4FFA8001441E4 /* AppDelegate.m in Sources */,
 				4B6C208717A4FFA8001441E4 /* ADEditViewController.m in Sources */,
@@ -512,6 +523,7 @@
 				4BA4B11317C9EA1A00F148FF /* AFJSONRequestOperation.m in Sources */,
 				4BA4B11417C9EA1A00F148FF /* AFNetworkActivityIndicatorManager.m in Sources */,
 				4BA4B11517C9EA1A00F148FF /* AFPropertyListRequestOperation.m in Sources */,
+				4BAEEDDA17F6DCD200B7F3BB /* ADCourseCardEditCell.m in Sources */,
 				4BA4B11617C9EA1A00F148FF /* AFURLConnectionOperation.m in Sources */,
 				4BA4B11717C9EA1A00F148FF /* AFXMLRequestOperation.m in Sources */,
 				4BA4B11817C9EA1A00F148FF /* UIImageView+AFNetworking.m in Sources */,

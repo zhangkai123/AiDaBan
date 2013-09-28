@@ -7,9 +7,12 @@
 //
 
 #import "ADPhotoEditViewController.h"
+#import "ADAddTitleViewController.h"
 
-@interface ADPhotoEditViewController ()
-
+@interface ADPhotoEditViewController ()<ADAddTitleViewControllerDelegate>
+{
+    UITextField *desciptField;
+}
 @end
 
 @implementation ADPhotoEditViewController
@@ -18,6 +21,7 @@
 -(void)dealloc
 {
     [myImage release];
+    [desciptField release];
     [super dealloc];
 }
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -69,10 +73,9 @@
     [self.view addSubview:photoView];
     [photoView release];
     
-    UITextField *desciptField = [[UITextField alloc]initWithFrame:CGRectMake(85, 44 + 10, 225, 110)];
+    desciptField = [[UITextField alloc]initWithFrame:CGRectMake(85, 44 + 10, 225, 110)];
     desciptField.backgroundColor = [UIColor redColor];
     [self.view addSubview:desciptField];
-    [desciptField release];
 
 }
 -(void)goBack
@@ -81,7 +84,55 @@
 }
 -(void)finishEdit
 {
+    [self showAddTitleViewController];
+//    [self.delegate finishPhotoEdit:self myPhoto:myImage description:desciptField.text];
+}
+
+#pragma mark - ADAddTitleViewControllerDelegate
+-(void)saveCurrentCourse:(UIViewController *)content title:(NSString *)title
+{
+    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc]init];
     
+    NSMutableDictionary *dictionary1 = [[NSMutableDictionary alloc]init];
+    [dictionary1 setObject:title forKey:@"CourseTitle"];
+    
+    NSMutableArray *courseCardArray = [[NSMutableArray alloc]init];
+    NSDictionary *courseCardDic = [NSDictionary dictionaryWithObjectsAndKeys:@"1.png",@"ImageName",desciptField.text,@"Description", nil];
+    [courseCardArray addObject:courseCardDic];
+    
+    [dictionary1 setObject:courseCardArray forKey:@"CourseCard"];
+    [courseCardArray release];
+    
+    [dictionary setObject:dictionary1 forKey:@"CurrentEditCourse"];
+    [dictionary1 release];
+    
+    [[ADDataController sharedDataController]saveCurrentEditCourse:dictionary];
+    [dictionary release];
+    
+    [content willMoveToParentViewController:nil];
+    [UIView animateWithDuration:0.6 animations:^{
+        content.view.frame = CGRectMake(0, content.view.frame.size.height, content.view.frame.size.width, content.view.frame.size.height);
+    }completion:^(BOOL finished){
+        [content.view removeFromSuperview];
+        [content removeFromParentViewController];
+        [self.delegate disMissPhotoEditViewController:self];
+    }];
+}
+
+#pragma mark - for child controller
+-(void)showAddTitleViewController
+{
+    ADAddTitleViewController *addTitleViewController = [[ADAddTitleViewController alloc]init];
+    addTitleViewController.delegate = self;
+    [self displayContentController:addTitleViewController];
+    [addTitleViewController release];
+}
+- (void) displayContentController: (UIViewController*) content;
+{
+    [self addChildViewController:content];
+    content.view.frame = self.view.frame;
+    [self.view addSubview:content.view];
+    [content didMoveToParentViewController:self];
 }
 
 - (void)didReceiveMemoryWarning

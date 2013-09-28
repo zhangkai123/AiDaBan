@@ -28,6 +28,7 @@
 #define AD_USER_GENDER @"ADUserGender"
 #define AD_USER_IMAGE_URL @"ADUserImageUrl"
 
+#define AD_CURRENT_EDIT_COURSE @"ADCurrentEditCourse"
 
 //notification
 #define AD_SINA_GET_TOKEN_SUCCESS @"ADSinaGetTokenSuccess"

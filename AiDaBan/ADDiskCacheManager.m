@@ -73,4 +73,17 @@
     BOOL loginMask = [userDefaults boolForKey:AD_USER_HAVE_LOGIN];
     return loginMask;
 }
+-(void)saveCurrentEditCourse:(NSDictionary *)dic
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:dic forKey:AD_CURRENT_EDIT_COURSE];
+    [userDefaults synchronize];
+}
+-(NSDictionary *)getCurrentEditCourse
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSDictionary *currentEditCourseDic = [userDefaults objectForKey:AD_CURRENT_EDIT_COURSE];
+    return currentEditCourseDic;
+}
+
 @end

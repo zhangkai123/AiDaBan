@@ -19,6 +19,9 @@
     UITableView *theTableView;
     
     ADUser *user;
+    
+    NSString *title;
+    NSMutableArray *courseCardArray;
 }
 @end
 
@@ -90,6 +93,11 @@
     [self.view addSubview:bottomBarView];
     
     user = [[ADDataController sharedDataController]getUserInfo];
+    
+    NSDictionary *currentEditCourseDic = [[ADDataController sharedDataController]getCurrentEditCourse];
+    title = [[currentEditCourseDic objectForKey:@"CurrentEditCourse"]objectForKey:@"CourseTitle"];
+    courseCardArray = [[NSMutableArray alloc]init];
+    [courseCardArray addObjectsFromArray:[[currentEditCourseDic objectForKey:@"CurrentEditCourse"]objectForKey:@"CourseCard"]];
 }
 -(void)goBack
 {
@@ -132,7 +140,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return [courseCardArray count] + 1;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -143,11 +151,13 @@
             cell = [[[ADEditTopCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"topCell"]autorelease];
         }
         [cell.imageView setImageWithURL:[NSURL URLWithString:user.profile_image_url] placeholderImage:nil];
+        [[(ADEditTopCell *)cell topicLabel] setText:title];
     }else{
         cell = [tableView dequeueReusableCellWithIdentifier:@"topCell"];
         if (!cell) {
             cell = [[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"topCell"]autorelease];
         }
+        cell.textLabel.text = [[courseCardArray objectAtIndex:indexPath.row - 1]objectForKey:@"Description"];
     }
     
     return cell;
@@ -195,6 +205,10 @@
         [content.view removeFromSuperview];
         [content removeFromParentViewController];
     }];
+}
+-(void)finishPhotoEdit:(UIViewController*) content myPhoto:(UIImage *)myPhoto description:(NSString *)des
+{
+    
 }
 #pragma mark - for child controller
 -(void)showPhotoEditViewController:(UIImage *)photo

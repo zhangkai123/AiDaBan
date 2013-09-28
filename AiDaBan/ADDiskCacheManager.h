@@ -18,4 +18,6 @@
 -(NSDictionary *)getUserInfoFromDisk;
 -(void)saveUserLoginMask:(BOOL)logined;
 -(BOOL)getUserLoginMask;
+-(void)saveCurrentEditCourse:(NSDictionary *)dic;
+-(NSDictionary *)getCurrentEditCourse;
 @end

@@ -31,6 +31,14 @@
 {
     [[ADDiskCacheManager sharedDiskCacheManager]saveSinaLoginInfo:response];
 }
+-(void)saveCurrentEditCourse:(NSDictionary *)dic
+{
+    [[ADDiskCacheManager sharedDiskCacheManager]saveCurrentEditCourse:dic];
+}
+-(NSDictionary *)getCurrentEditCourse
+{
+    return [[ADDiskCacheManager sharedDiskCacheManager]getCurrentEditCourse];
+}
 -(BOOL)getUserLoginMask
 {
     return [[ADDiskCacheManager sharedDiskCacheManager]getUserLoginMask];

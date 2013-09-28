@@ -11,6 +11,7 @@
 @protocol ADPhotoEditViewControllerDelegate <NSObject>
 
 -(void)disMissPhotoEditViewController: (UIViewController*) content;
+-(void)finishPhotoEdit:(UIViewController*) content myPhoto:(UIImage *)myPhoto description:(NSString *)des;
 
 @end
 
