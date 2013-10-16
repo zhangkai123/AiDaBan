@@ -9,6 +9,7 @@
 #import "ADEditViewController.h"
 #import "ADEditTopCell.h"
 #import "ADPhotoEditViewController.h"
+#import "ADCourseCardEditCell.h"
 
 @interface ADEditViewController ()<UITableViewDataSource,UITableViewDelegate,UIActionSheetDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate,ADPhotoEditViewControllerDelegate>
 {
@@ -153,11 +154,12 @@
         [cell.imageView setImageWithURL:[NSURL URLWithString:user.profile_image_url] placeholderImage:nil];
         [[(ADEditTopCell *)cell topicLabel] setText:title];
     }else{
-        cell = [tableView dequeueReusableCellWithIdentifier:@"topCell"];
+        cell = [tableView dequeueReusableCellWithIdentifier:@"cardCell"];
         if (!cell) {
-            cell = [[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"topCell"]autorelease];
+            cell = [[[ADCourseCardEditCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cardCell"]autorelease];
         }
-        cell.textLabel.text = [[courseCardArray objectAtIndex:indexPath.row - 1]objectForKey:@"Description"];
+        [[(ADCourseCardEditCell *)cell desLabel] setText:[[courseCardArray objectAtIndex:indexPath.row - 1]objectForKey:@"Description"]];
+        [[(ADCourseCardEditCell *)cell imageView] setImage:nil];
     }
     
     return cell;

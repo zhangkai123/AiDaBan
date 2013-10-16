@@ -87,7 +87,10 @@
     [self showAddTitleViewController];
 //    [self.delegate finishPhotoEdit:self myPhoto:myImage description:desciptField.text];
 }
-
+-(void)savePhoto
+{
+    
+}
 #pragma mark - ADAddTitleViewControllerDelegate
 -(void)saveCurrentCourse:(UIViewController *)content title:(NSString *)title
 {

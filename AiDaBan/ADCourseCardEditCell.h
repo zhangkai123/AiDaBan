@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface ADCourseCardEditCell : UITableViewCell
-
+{
+    UIImageView *imageView;
+    UILabel *desLabel;
+}
+@property(nonatomic,retain) UIImageView *imageView;
+@property(nonatomic,retain) UILabel *desLabel;
 @end
